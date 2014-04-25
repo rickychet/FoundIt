@@ -2,8 +2,8 @@
 //  ViewController.m
 //  FoundIt
 //
-//  Created by Mai Nyia Lee on 3/12/14.
-//  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
+//  Created by Yuqian Chen on 4/23/14.
+//  Copyright (c) 2014 Yuqian Chen. All rights reserved.
 //
 
 #import "ViewController.h"

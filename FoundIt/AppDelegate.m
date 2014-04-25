@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  FoundIt
 //
-//  Created by Mai Nyia Lee on 3/12/14.
-//  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
+//  Created by Yuqian Chen on 4/23/14.
+//  Copyright (c) 2014 Yuqian Chen. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -13,9 +13,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     return YES;
-    
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
