@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -14,6 +15,13 @@
 {
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    [Parse setApplicationId:@"5pXLakzrsshsEMuGF25jSL2q5neODwBcEiG2GKkG"
+                  clientKey:@"0iwXxjFzhkr8AKQt04Q3sx1BR9UxcepC9bOdQLBu"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+    
     return YES;
 }
 

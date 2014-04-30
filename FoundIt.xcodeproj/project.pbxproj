@@ -20,10 +20,21 @@
 		D98D3E4F19089648000E174E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E3119089648000E174E /* UIKit.framework */; };
 		D98D3E5719089648000E174E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D98D3E5519089648000E174E /* InfoPlist.strings */; };
 		D98D3E5919089648000E174E /* FoundItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D98D3E5819089648000E174E /* FoundItTests.m */; };
-		D98D3E641908A645000E174E /* lostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98D3E631908A645000E174E /* lostViewController.m */; };
 		D98D3E6A1908AC92000E174E /* foundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98D3E691908AC92000E174E /* foundViewController.m */; };
 		D9A58D541908B74B00912633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A58D531908B74B00912633 /* Images.xcassets */; };
 		D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A58D591908BAF800912633 /* homeViewController.m */; };
+		D9F16BBC190F2F310016DE9D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBB190F2F310016DE9D /* Parse.framework */; };
+		D9F16BBE190F2F910016DE9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */; };
+		D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBF190F2F960016DE9D /* CFNetwork.framework */; };
+		D9F16BC2190F2FA50016DE9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */; };
+		D9F16BC4190F2FB80016DE9D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC3190F2FB80016DE9D /* libz.dylib */; };
+		D9F16BC6190F2FBF0016DE9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC5190F2FBF0016DE9D /* MobileCoreServices.framework */; };
+		D9F16BC8190F2FC40016DE9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC7190F2FC40016DE9D /* QuartzCore.framework */; };
+		D9F16BCA190F2FCB0016DE9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC9190F2FCB0016DE9D /* Security.framework */; };
+		D9F16BCC190F2FD20016DE9D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BCB190F2FD20016DE9D /* StoreKit.framework */; };
+		D9F16BCE190F2FDB0016DE9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */; };
+		D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BD0190F30610016DE9D /* itemViewController.m */; };
+		D9F16BD4190F33890016DE9D /* lostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BD3190F33890016DE9D /* lostViewController.m */; };
 		D9FA7A7C1908D3C200BEFC7C /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7A7B1908D3C200BEFC7C /* profileViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -56,13 +67,25 @@
 		D98D3E5419089648000E174E /* FoundItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoundItTests-Info.plist"; sourceTree = "<group>"; };
 		D98D3E5619089648000E174E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D98D3E5819089648000E174E /* FoundItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundItTests.m; sourceTree = "<group>"; };
-		D98D3E621908A645000E174E /* lostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lostViewController.h; sourceTree = "<group>"; };
-		D98D3E631908A645000E174E /* lostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lostViewController.m; sourceTree = "<group>"; };
 		D98D3E681908AC92000E174E /* foundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = foundViewController.h; sourceTree = "<group>"; };
 		D98D3E691908AC92000E174E /* foundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foundViewController.m; sourceTree = "<group>"; };
 		D9A58D531908B74B00912633 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9A58D581908BAF800912633 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		D9A58D591908BAF800912633 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		D9F16BBB190F2F310016DE9D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D9F16BBF190F2F960016DE9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D9F16BC3190F2FB80016DE9D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D9F16BC5190F2FBF0016DE9D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D9F16BC7190F2FC40016DE9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D9F16BC9190F2FCB0016DE9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D9F16BCB190F2FD20016DE9D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D9F16BCF190F30610016DE9D /* itemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemViewController.h; sourceTree = "<group>"; };
+		D9F16BD0190F30610016DE9D /* itemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemViewController.m; sourceTree = "<group>"; };
+		D9F16BD2190F33890016DE9D /* lostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lostViewController.h; sourceTree = "<group>"; };
+		D9F16BD3190F33890016DE9D /* lostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lostViewController.m; sourceTree = "<group>"; };
 		D9FA7A7A1908D3C200BEFC7C /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
 		D9FA7A7B1908D3C200BEFC7C /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,8 +95,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F16BCE190F2FDB0016DE9D /* SystemConfiguration.framework in Frameworks */,
+				D9F16BCC190F2FD20016DE9D /* StoreKit.framework in Frameworks */,
+				D9F16BCA190F2FCB0016DE9D /* Security.framework in Frameworks */,
+				D9F16BC8190F2FC40016DE9D /* QuartzCore.framework in Frameworks */,
+				D9F16BC6190F2FBF0016DE9D /* MobileCoreServices.framework in Frameworks */,
+				D9F16BC4190F2FB80016DE9D /* libz.dylib in Frameworks */,
+				D9F16BC2190F2FA50016DE9D /* CoreLocation.framework in Frameworks */,
 				D98D3E3019089648000E174E /* CoreGraphics.framework in Frameworks */,
+				D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */,
+				D9F16BBE190F2F910016DE9D /* AudioToolbox.framework in Frameworks */,
 				D98D3E3219089648000E174E /* UIKit.framework in Frameworks */,
+				D9F16BBC190F2F310016DE9D /* Parse.framework in Frameworks */,
 				D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +127,7 @@
 		D98D3E2119089648000E174E = {
 			isa = PBXGroup;
 			children = (
+				D9F16BBB190F2F310016DE9D /* Parse.framework */,
 				D98D3E3319089648000E174E /* FoundIt */,
 				D98D3E5219089648000E174E /* FoundItTests */,
 				D98D3E2C19089648000E174E /* Frameworks */,
@@ -113,6 +147,15 @@
 		D98D3E2C19089648000E174E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */,
+				D9F16BCB190F2FD20016DE9D /* StoreKit.framework */,
+				D9F16BC9190F2FCB0016DE9D /* Security.framework */,
+				D9F16BC7190F2FC40016DE9D /* QuartzCore.framework */,
+				D9F16BC5190F2FBF0016DE9D /* MobileCoreServices.framework */,
+				D9F16BC3190F2FB80016DE9D /* libz.dylib */,
+				D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */,
+				D9F16BBF190F2F960016DE9D /* CFNetwork.framework */,
+				D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */,
 				D98D3E2D19089648000E174E /* Foundation.framework */,
 				D98D3E2F19089648000E174E /* CoreGraphics.framework */,
 				D98D3E3119089648000E174E /* UIKit.framework */,
@@ -127,12 +170,14 @@
 				D98D3E3C19089648000E174E /* AppDelegate.h */,
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
+				D9F16BCF190F30610016DE9D /* itemViewController.h */,
+				D9F16BD0190F30610016DE9D /* itemViewController.m */,
+				D9F16BD2190F33890016DE9D /* lostViewController.h */,
+				D9F16BD3190F33890016DE9D /* lostViewController.m */,
 				D9A58D581908BAF800912633 /* homeViewController.h */,
 				D9A58D591908BAF800912633 /* homeViewController.m */,
 				D9FA7A7A1908D3C200BEFC7C /* profileViewController.h */,
 				D9FA7A7B1908D3C200BEFC7C /* profileViewController.m */,
-				D98D3E621908A645000E174E /* lostViewController.h */,
-				D98D3E631908A645000E174E /* lostViewController.m */,
 				D98D3E681908AC92000E174E /* foundViewController.h */,
 				D98D3E691908AC92000E174E /* foundViewController.m */,
 				D98D3E4219089648000E174E /* ViewController.h */,
@@ -269,11 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F16BD4190F33890016DE9D /* lostViewController.m in Sources */,
 				D9FA7A7C1908D3C200BEFC7C /* profileViewController.m in Sources */,
-				D98D3E641908A645000E174E /* lostViewController.m in Sources */,
 				D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */,
 				D98D3E4419089648000E174E /* ViewController.m in Sources */,
 				D98D3E3E19089648000E174E /* AppDelegate.m in Sources */,
+				D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
 				D98D3E6A1908AC92000E174E /* foundViewController.m in Sources */,
 			);
@@ -400,6 +446,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
 				INFOPLIST_FILE = "FoundIt/FoundIt-Info.plist";
@@ -413,6 +463,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
 				INFOPLIST_FILE = "FoundIt/FoundIt-Info.plist";
