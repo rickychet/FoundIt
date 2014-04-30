@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+
 
 @interface profileViewController : UIViewController
+- (IBAction)contact:(UIButton *)sender;
+
 
 @end
