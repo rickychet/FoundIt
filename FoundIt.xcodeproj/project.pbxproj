@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C0E19119ECA00029F29 /* Parse.framework */; };
 		D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2D19089648000E174E /* Foundation.framework */; };
 		D98D3E3019089648000E174E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2F19089648000E174E /* CoreGraphics.framework */; };
 		D98D3E3219089648000E174E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E3119089648000E174E /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		D98D3E6A1908AC92000E174E /* foundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D98D3E691908AC92000E174E /* foundViewController.m */; };
 		D9A58D541908B74B00912633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A58D531908B74B00912633 /* Images.xcassets */; };
 		D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A58D591908BAF800912633 /* homeViewController.m */; };
-		D9F16BBC190F2F310016DE9D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBB190F2F310016DE9D /* Parse.framework */; };
 		D9F16BBE190F2F910016DE9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */; };
 		D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBF190F2F960016DE9D /* CFNetwork.framework */; };
 		D9F16BC2190F2FA50016DE9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */; };
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5DF0C0E19119ECA00029F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D98D3E2A19089648000E174E /* FoundIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98D3E2D19089648000E174E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D98D3E2F19089648000E174E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,7 +73,6 @@
 		D9A58D531908B74B00912633 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9A58D581908BAF800912633 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		D9A58D591908BAF800912633 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
-		D9F16BBB190F2F310016DE9D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D9F16BBF190F2F960016DE9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -101,12 +101,12 @@
 				D9F16BC8190F2FC40016DE9D /* QuartzCore.framework in Frameworks */,
 				D9F16BC6190F2FBF0016DE9D /* MobileCoreServices.framework in Frameworks */,
 				D9F16BC4190F2FB80016DE9D /* libz.dylib in Frameworks */,
+				B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */,
 				D9F16BC2190F2FA50016DE9D /* CoreLocation.framework in Frameworks */,
 				D98D3E3019089648000E174E /* CoreGraphics.framework in Frameworks */,
 				D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */,
 				D9F16BBE190F2F910016DE9D /* AudioToolbox.framework in Frameworks */,
 				D98D3E3219089648000E174E /* UIKit.framework in Frameworks */,
-				D9F16BBC190F2F310016DE9D /* Parse.framework in Frameworks */,
 				D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +127,6 @@
 		D98D3E2119089648000E174E = {
 			isa = PBXGroup;
 			children = (
-				D9F16BBB190F2F310016DE9D /* Parse.framework */,
 				D98D3E3319089648000E174E /* FoundIt */,
 				D98D3E5219089648000E174E /* FoundItTests */,
 				D98D3E2C19089648000E174E /* Frameworks */,
@@ -147,6 +146,7 @@
 		D98D3E2C19089648000E174E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5DF0C0E19119ECA00029F29 /* Parse.framework */,
 				D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */,
 				D9F16BCB190F2FD20016DE9D /* StoreKit.framework */,
 				D9F16BC9190F2FCB0016DE9D /* Security.framework */,
@@ -449,6 +449,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
+					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
@@ -466,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
+					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
