@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1248" y="-175"/>
         </scene>
-        <!--Table View Controller - Lost-->
+        <!--Lost View Controller - Lost-->
         <scene sceneID="c6W-Dn-Iyb">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="SAx-9E-RRR" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="SAx-9E-RRR" customClass="lostViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="18o-bW-QzP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="1268" y="591"/>
         </scene>
-        <!--Table View Controller - Found-->
+        <!--Lost View Controller - Found-->
         <scene sceneID="tUm-5I-eme">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="Kel-of-gfo" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="Kel-of-gfo" customClass="lostViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="zkh-fi-fl7">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -551,7 +551,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ulB-9R-kuZ"/>
-        <segue reference="Lae-Iw-Mxf"/>
+        <segue reference="b1M-HO-xAA"/>
+        <segue reference="E01-gi-rUf"/>
     </inferredMetricsTieBreakers>
 </document>
