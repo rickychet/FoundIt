@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C0E19119ECA00029F29 /* Parse.framework */; };
+		22CEB3E41912E65300FB2760 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CEB3E31912E65300FB2760 /* Parse.framework */; };
+		22CEB3E71912EA5800FB2760 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEB3E61912EA5800FB2760 /* PickerViewController.m */; };
 		B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C101911A88B00029F29 /* MessageUI.framework */; };
 		D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2D19089648000E174E /* Foundation.framework */; };
 		D98D3E3019089648000E174E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2F19089648000E174E /* CoreGraphics.framework */; };
@@ -50,7 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B5DF0C0E19119ECA00029F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		22CEB3E31912E65300FB2760 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Downloads/Parse.framework; sourceTree = "<group>"; };
+		22CEB3E51912EA5800FB2760 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		22CEB3E61912EA5800FB2760 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		B5DF0C101911A88B00029F29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D98D3E2A19089648000E174E /* FoundIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98D3E2D19089648000E174E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CEB3E41912E65300FB2760 /* Parse.framework in Frameworks */,
 				B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */,
 				D9F16BCE190F2FDB0016DE9D /* SystemConfiguration.framework in Frameworks */,
 				D9F16BCC190F2FD20016DE9D /* StoreKit.framework in Frameworks */,
@@ -104,7 +108,6 @@
 				D9F16BC8190F2FC40016DE9D /* QuartzCore.framework in Frameworks */,
 				D9F16BC6190F2FBF0016DE9D /* MobileCoreServices.framework in Frameworks */,
 				D9F16BC4190F2FB80016DE9D /* libz.dylib in Frameworks */,
-				B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */,
 				D9F16BC2190F2FA50016DE9D /* CoreLocation.framework in Frameworks */,
 				D98D3E3019089648000E174E /* CoreGraphics.framework in Frameworks */,
 				D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */,
@@ -149,8 +152,8 @@
 		D98D3E2C19089648000E174E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22CEB3E31912E65300FB2760 /* Parse.framework */,
 				B5DF0C101911A88B00029F29 /* MessageUI.framework */,
-				B5DF0C0E19119ECA00029F29 /* Parse.framework */,
 				D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */,
 				D9F16BCB190F2FD20016DE9D /* StoreKit.framework */,
 				D9F16BC9190F2FCB0016DE9D /* Security.framework */,
@@ -174,6 +177,8 @@
 				D98D3E3C19089648000E174E /* AppDelegate.h */,
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
+				22CEB3E51912EA5800FB2760 /* PickerViewController.h */,
+				22CEB3E61912EA5800FB2760 /* PickerViewController.m */,
 				D9F16BCF190F30610016DE9D /* itemViewController.h */,
 				D9F16BD0190F30610016DE9D /* itemViewController.m */,
 				D9F16BD2190F33890016DE9D /* lostViewController.h */,
@@ -322,6 +327,7 @@
 				D9FA7A7C1908D3C200BEFC7C /* profileViewController.m in Sources */,
 				D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */,
 				D98D3E4419089648000E174E /* ViewController.m in Sources */,
+				22CEB3E71912EA5800FB2760 /* PickerViewController.m in Sources */,
 				D98D3E3E19089648000E174E /* AppDelegate.m in Sources */,
 				D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
@@ -452,11 +458,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
+					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
+					/afs/cs.wisc.edu/u/b/a/barker/Downloads,
+					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/afs/cs.wisc.edu/u/b/a/barker/Downloads/Parse.framework/Headers,
+				);
 				INFOPLIST_FILE = "FoundIt/FoundIt-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -470,11 +483,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
+					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
+					/afs/cs.wisc.edu/u/b/a/barker/Downloads,
+					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/afs/cs.wisc.edu/u/b/a/barker/Downloads/Parse.framework/Headers,
+				);
 				INFOPLIST_FILE = "FoundIt/FoundIt-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
