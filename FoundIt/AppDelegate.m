@@ -18,9 +18,12 @@
     [Parse setApplicationId:@"j8wmpdGYWp7ZJC9LfwH0I77Oo0z8sTVs1yP2eT1B"
                   clientKey:@"R1cuYy1VYuYl5HQVFaOpnva3vAIZMP1qP8t5TP5g"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
+    PFObject *testObject = [PFObject objectWithClassName:@"foundItems"];
+    testObject[@"itemType"] = @"Hat";
+    testObject[@"itemColor"] = @"Blue";
     [testObject saveInBackground];
+//    testObject[@"foo"] = @"bar";
+//    [testObject saveInBackground];
     
     return YES;
 }

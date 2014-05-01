@@ -83,7 +83,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bHf-Sr-0uD" kind="push" id="8uL-2s-dd7"/>
+                                            <segue destination="0yC-vM-QuQ" kind="push" id="dw4-TF-I0e"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -145,7 +145,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bHf-Sr-0uD" kind="push" id="Lae-Iw-Mxf"/>
+                                            <segue destination="0yC-vM-QuQ" kind="push" id="QOk-67-GjK"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -193,7 +193,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="B28-iJ-GtZ">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B28-iJ-GtZ" id="oTD-pV-bQQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -201,7 +201,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3X6-In-HQI">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3X6-In-HQI" id="Xl2-DD-q7Y">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -214,6 +214,7 @@
                             <outlet property="delegate" destination="0yC-vM-QuQ" id="b9r-E0-w6Z"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="VHd-MB-mP8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZ8-x9-9Rl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,7 +588,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8uL-2s-dd7"/>
+        <segue reference="b1M-HO-xAA"/>
         <segue reference="ulB-9R-kuZ"/>
+        <segue reference="dw4-TF-I0e"/>
     </inferredMetricsTieBreakers>
 </document>
