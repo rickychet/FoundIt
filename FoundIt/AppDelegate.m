@@ -13,6 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [Parse setApplicationId:@"j8wmpdGYWp7ZJC9LfwH0I77Oo0z8sTVs1yP2eT1B"
@@ -20,7 +21,7 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+    //[testObject saveInBackground];
     
     return YES;
 }
