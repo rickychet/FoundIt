@@ -88,7 +88,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Where did you lose it?" footerTitle="Latitude and Longitude" id="TXj-cK-sMK">
+                            <tableViewSection headerTitle="Where did you lose it?" footerTitle="Select a Location" id="TXj-cK-sMK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kn9-CR-qwb" detailTextLabel="vc5-qR-rUV" style="IBUITableViewCellStyleValue1" id="Jr1-Q6-klg">
                                         <rect key="frame" x="0.0" y="238" width="320" height="44"/>
@@ -627,7 +627,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Where did you find it?" footerTitle="Latitude and Longitude" id="J7h-Kt-LJf">
+                            <tableViewSection headerTitle="Where did you find it?" footerTitle="Select a Location" id="J7h-Kt-LJf">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HNs-p0-tnf" detailTextLabel="Fji-je-5iA" style="IBUITableViewCellStyleValue1" id="TjL-Qg-52H">
                                         <rect key="frame" x="0.0" y="174" width="320" height="44"/>
@@ -689,7 +689,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="WHERE WAS IT TURNED IN?" id="hWj-M4-2zd">
+                            <tableViewSection headerTitle="WHERE WAS IT TURNED IN?" footerTitle="Select a Location" id="hWj-M4-2zd">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="v9N-hd-nbK" detailTextLabel="6cz-SZ-xcN" style="IBUITableViewCellStyleValue1" id="CFV-zI-vmK">
                                         <rect key="frame" x="0.0" y="412" width="320" height="44"/>
@@ -723,7 +723,7 @@
                             <tableViewSection id="86o-mn-DCv">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="R9U-wV-0Pb" style="IBUITableViewCellStyleDefault" id="YNF-Vq-m98">
-                                        <rect key="frame" x="0.0" y="476" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="496" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YNF-Vq-m98" id="e1m-l1-hiI">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -773,7 +773,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cyt-E9-i26"/>
+                    <navigationItem key="navigationItem" prompt="Tap and hold to select a location" id="cyt-E9-i26"/>
                     <connections>
                         <outlet property="mapView" destination="Eck-hx-hAd" id="ltt-mP-9IS"/>
                     </connections>
@@ -793,8 +793,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PPK-vR-KWf"/>
-        <segue reference="b1M-HO-xAA"/>
-        <segue reference="E01-gi-rUf"/>
+        <segue reference="ulB-9R-kuZ"/>
+        <segue reference="mxJ-fh-r9U"/>
+        <segue reference="bb3-e6-YU0"/>
     </inferredMetricsTieBreakers>
 </document>
