@@ -1,18 +1,18 @@
 //
-//  lostViewController.m
+//  ColorViewController.m
 //  FoundIt
 //
-//  Created by Yuqian Chen on 4/28/14.
+//  Created by Logan Eklund on 5/2/14.
 //  Copyright (c) 2014 Yuqian Chen. All rights reserved.
 //
 
-#import "lostViewController.h"
+#import "ColorViewController.h"
 
-@interface lostViewController ()
+@interface ColorViewController ()
 
 @end
 
-@implementation lostViewController
+@implementation ColorViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,7 +42,21 @@
 
 #pragma mark - Table view data source
 
-/* Commented Out because it was causing a crash.
+/* Commented Out because we're using static cells
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -51,7 +65,8 @@
     // Configure the cell...
     
     return cell;
-}*/
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.

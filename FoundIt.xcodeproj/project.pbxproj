@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57893FE191435B400E3FB1E /* ColorViewController.m */; };
 		B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C0E19119ECA00029F29 /* Parse.framework */; };
 		B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C101911A88B00029F29 /* MessageUI.framework */; };
 		D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2D19089648000E174E /* Foundation.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B57893FD191435B400E3FB1E /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		B57893FE191435B400E3FB1E /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 		B5DF0C0E19119ECA00029F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B5DF0C101911A88B00029F29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D98D3E2A19089648000E174E /* FoundIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +177,8 @@
 				D98D3E3C19089648000E174E /* AppDelegate.h */,
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
+				B57893FD191435B400E3FB1E /* ColorViewController.h */,
+				B57893FE191435B400E3FB1E /* ColorViewController.m */,
 				D9F16BCF190F30610016DE9D /* itemViewController.h */,
 				D9F16BD0190F30610016DE9D /* itemViewController.m */,
 				D9F16BD2190F33890016DE9D /* lostViewController.h */,
@@ -323,6 +328,7 @@
 				D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */,
 				D98D3E4419089648000E174E /* ViewController.m in Sources */,
 				D98D3E3E19089648000E174E /* AppDelegate.m in Sources */,
+				B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */,
 				D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
 				D98D3E6A1908AC92000E174E /* foundViewController.m in Sources */,
