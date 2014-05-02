@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57893FE191435B400E3FB1E /* ColorViewController.m */; };
+		B5789401191440A100E3FB1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5789400191440A100E3FB1E /* MapKit.framework */; };
+		B5789404191444B800E3FB1E /* locationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5789403191444B800E3FB1E /* locationViewController.m */; };
+		B578940719144AE800E3FB1E /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B578940619144AE800E3FB1E /* MapAnnotation.m */; };
 		B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C0E19119ECA00029F29 /* Parse.framework */; };
 		B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C101911A88B00029F29 /* MessageUI.framework */; };
 		D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2D19089648000E174E /* Foundation.framework */; };
@@ -53,6 +56,11 @@
 /* Begin PBXFileReference section */
 		B57893FD191435B400E3FB1E /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		B57893FE191435B400E3FB1E /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		B5789400191440A100E3FB1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B5789402191444B800E3FB1E /* locationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationViewController.h; sourceTree = "<group>"; };
+		B5789403191444B800E3FB1E /* locationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationViewController.m; sourceTree = "<group>"; };
+		B578940519144AE800E3FB1E /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		B578940619144AE800E3FB1E /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		B5DF0C0E19119ECA00029F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B5DF0C101911A88B00029F29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D98D3E2A19089648000E174E /* FoundIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5789401191440A100E3FB1E /* MapKit.framework in Frameworks */,
 				B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */,
 				D9F16BCE190F2FDB0016DE9D /* SystemConfiguration.framework in Frameworks */,
 				D9F16BCC190F2FD20016DE9D /* StoreKit.framework in Frameworks */,
@@ -152,6 +161,7 @@
 		D98D3E2C19089648000E174E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5789400191440A100E3FB1E /* MapKit.framework */,
 				B5DF0C101911A88B00029F29 /* MessageUI.framework */,
 				B5DF0C0E19119ECA00029F29 /* Parse.framework */,
 				D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */,
@@ -177,6 +187,10 @@
 				D98D3E3C19089648000E174E /* AppDelegate.h */,
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
+				B578940519144AE800E3FB1E /* MapAnnotation.h */,
+				B578940619144AE800E3FB1E /* MapAnnotation.m */,
+				B5789402191444B800E3FB1E /* locationViewController.h */,
+				B5789403191444B800E3FB1E /* locationViewController.m */,
 				B57893FD191435B400E3FB1E /* ColorViewController.h */,
 				B57893FE191435B400E3FB1E /* ColorViewController.m */,
 				D9F16BCF190F30610016DE9D /* itemViewController.h */,
@@ -330,6 +344,8 @@
 				D98D3E3E19089648000E174E /* AppDelegate.m in Sources */,
 				B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */,
 				D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */,
+				B578940719144AE800E3FB1E /* MapAnnotation.m in Sources */,
+				B5789404191444B800E3FB1E /* locationViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
 				D98D3E6A1908AC92000E174E /* foundViewController.m in Sources */,
 			);
