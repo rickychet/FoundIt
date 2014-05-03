@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface lostViewController : UITableViewController
+#import "Store.h"
+@interface lostViewController : UITableViewController{
+    NSMutableArray *passedColor;
+}
+@property (weak, nonatomic) IBOutlet UILabel *colorchange;
+- (IBAction)viewContent:(id)sender;
 
 @end

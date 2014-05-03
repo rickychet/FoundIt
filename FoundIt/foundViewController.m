@@ -2,7 +2,7 @@
 //  foundViewController.m
 //  FoundIt
 //
-//  Created by Yuqian Chen on 4/23/14.
+//  Created by Yuqian Chen on 5/3/14.
 //  Copyright (c) 2014 Yuqian Chen. All rights reserved.
 //
 
@@ -14,9 +14,9 @@
 
 @implementation foundViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -26,7 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +40,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)contentview:(id)sender {
+    Store* myStore = [Store sharedStore];
+    passedColor = myStore.color;
+    NSString *colors = @"";
+    for(int i = 0; i<passedColor.count;i++){
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+    }
+    _colorchange.text =colors;
+
+}
 @end
