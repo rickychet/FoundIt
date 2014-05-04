@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22FAF3D11915B4680011EFB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FAF3D01915B4680011EFB1 /* Parse.framework */; };
+		22FAF3D41915C1980011EFB1 /* cameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FAF3D31915C1980011EFB1 /* cameraViewController.m */; };
 		B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57893FE191435B400E3FB1E /* ColorViewController.m */; };
 		B5789401191440A100E3FB1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5789400191440A100E3FB1E /* MapKit.framework */; };
 		B5789404191444B800E3FB1E /* locationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5789403191444B800E3FB1E /* locationViewController.m */; };
@@ -58,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		22FAF3D01915B4680011EFB1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		22FAF3D21915C1980011EFB1 /* cameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraViewController.h; sourceTree = "<group>"; };
+		22FAF3D31915C1980011EFB1 /* cameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraViewController.m; sourceTree = "<group>"; };
 		B57893FD191435B400E3FB1E /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		B57893FE191435B400E3FB1E /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 		B5789400191440A100E3FB1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -199,6 +202,8 @@
 				D98D3E3C19089648000E174E /* AppDelegate.h */,
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
+				22FAF3D21915C1980011EFB1 /* cameraViewController.h */,
+				22FAF3D31915C1980011EFB1 /* cameraViewController.m */,
 				D9F16BE619158AC30016DE9D /* itemsViewController.h */,
 				D9F16BE719158AC30016DE9D /* itemsViewController.m */,
 				B578940519144AE800E3FB1E /* MapAnnotation.h */,
@@ -362,6 +367,7 @@
 				D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */,
 				B578940719144AE800E3FB1E /* MapAnnotation.m in Sources */,
 				B5789404191444B800E3FB1E /* locationViewController.m in Sources */,
+				22FAF3D41915C1980011EFB1 /* cameraViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
 				D9F16BE5191586030016DE9D /* foundViewController.m in Sources */,
 			);
