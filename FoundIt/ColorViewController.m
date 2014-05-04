@@ -19,6 +19,7 @@
     Store* myStore = [Store sharedStore];
     myStore.color = colorlist;
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Color Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [self.navigationController popViewControllerAnimated:YES];
     [alert show];
 }
 

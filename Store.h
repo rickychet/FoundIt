@@ -10,7 +10,9 @@
 
 @interface Store : NSObject{
     NSMutableArray *color;
+    NSString *item;
 }
 @property(nonatomic,strong)NSMutableArray* color;
+@property(strong,nonatomic)NSString *item;
 + (Store *) sharedStore;
 @end

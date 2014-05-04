@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Store.h"
+@interface itemsViewController : UITableViewController{
+    
+}
+@property (strong, nonatomic) IBOutlet UITableView *items;
+- (IBAction)submit:(id)sender;
 
-@interface itemsViewController : UITableViewController
 
 @end

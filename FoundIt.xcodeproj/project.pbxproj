@@ -26,7 +26,6 @@
 		D98D3E4F19089648000E174E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E3119089648000E174E /* UIKit.framework */; };
 		D98D3E5719089648000E174E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D98D3E5519089648000E174E /* InfoPlist.strings */; };
 		D98D3E5919089648000E174E /* FoundItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D98D3E5819089648000E174E /* FoundItTests.m */; };
-		D9A58D541908B74B00912633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A58D531908B74B00912633 /* Images.xcassets */; };
 		D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A58D591908BAF800912633 /* homeViewController.m */; };
 		D9F16BBE190F2F910016DE9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */; };
 		D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBF190F2F960016DE9D /* CFNetwork.framework */; };
@@ -37,11 +36,11 @@
 		D9F16BCA190F2FCB0016DE9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC9190F2FCB0016DE9D /* Security.framework */; };
 		D9F16BCC190F2FD20016DE9D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BCB190F2FD20016DE9D /* StoreKit.framework */; };
 		D9F16BCE190F2FDB0016DE9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */; };
-		D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BD0190F30610016DE9D /* itemViewController.m */; };
 		D9F16BD4190F33890016DE9D /* lostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BD3190F33890016DE9D /* lostViewController.m */; };
 		D9F16BE2191567C50016DE9D /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BE1191567C50016DE9D /* Store.m */; };
 		D9F16BE5191586030016DE9D /* foundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BE4191586030016DE9D /* foundViewController.m */; };
 		D9F16BE819158AC30016DE9D /* itemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F16BE719158AC30016DE9D /* itemsViewController.m */; };
+		D9F16BEA1915951D0016DE9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F16BE91915951D0016DE9D /* Images.xcassets */; };
 		D9FA7A7C1908D3C200BEFC7C /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FA7A7B1908D3C200BEFC7C /* profileViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		D98D3E5419089648000E174E /* FoundItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoundItTests-Info.plist"; sourceTree = "<group>"; };
 		D98D3E5619089648000E174E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D98D3E5819089648000E174E /* FoundItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundItTests.m; sourceTree = "<group>"; };
-		D9A58D531908B74B00912633 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9A58D581908BAF800912633 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		D9A58D591908BAF800912633 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -95,8 +93,6 @@
 		D9F16BC9190F2FCB0016DE9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D9F16BCB190F2FD20016DE9D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D9F16BCD190F2FDB0016DE9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D9F16BCF190F30610016DE9D /* itemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemViewController.h; sourceTree = "<group>"; };
-		D9F16BD0190F30610016DE9D /* itemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemViewController.m; sourceTree = "<group>"; };
 		D9F16BD2190F33890016DE9D /* lostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lostViewController.h; sourceTree = "<group>"; };
 		D9F16BD3190F33890016DE9D /* lostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lostViewController.m; sourceTree = "<group>"; };
 		D9F16BE0191567C50016DE9D /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = ../Store.h; sourceTree = "<group>"; };
@@ -105,6 +101,7 @@
 		D9F16BE4191586030016DE9D /* foundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = foundViewController.m; sourceTree = "<group>"; };
 		D9F16BE619158AC30016DE9D /* itemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemsViewController.h; sourceTree = "<group>"; };
 		D9F16BE719158AC30016DE9D /* itemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemsViewController.m; sourceTree = "<group>"; };
+		D9F16BE91915951D0016DE9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9FA7A7A1908D3C200BEFC7C /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
 		D9FA7A7B1908D3C200BEFC7C /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,8 +200,6 @@
 				B5789403191444B800E3FB1E /* locationViewController.m */,
 				B57893FD191435B400E3FB1E /* ColorViewController.h */,
 				B57893FE191435B400E3FB1E /* ColorViewController.m */,
-				D9F16BCF190F30610016DE9D /* itemViewController.h */,
-				D9F16BD0190F30610016DE9D /* itemViewController.m */,
 				D9F16BD2190F33890016DE9D /* lostViewController.h */,
 				D9F16BD3190F33890016DE9D /* lostViewController.m */,
 				D9F16BE3191586030016DE9D /* foundViewController.h */,
@@ -215,7 +210,7 @@
 				D9FA7A7B1908D3C200BEFC7C /* profileViewController.m */,
 				D98D3E4219089648000E174E /* ViewController.h */,
 				D98D3E4319089648000E174E /* ViewController.m */,
-				D9A58D531908B74B00912633 /* Images.xcassets */,
+				D9F16BE91915951D0016DE9D /* Images.xcassets */,
 				D98D3E3419089648000E174E /* Supporting Files */,
 			);
 			path = FoundIt;
@@ -326,7 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A58D541908B74B00912633 /* Images.xcassets in Resources */,
+				D9F16BEA1915951D0016DE9D /* Images.xcassets in Resources */,
 				D98D3E3819089648000E174E /* InfoPlist.strings in Resources */,
 				D98D3E4119089648000E174E /* Main.storyboard in Resources */,
 			);
@@ -355,7 +350,6 @@
 				D98D3E4419089648000E174E /* ViewController.m in Sources */,
 				D98D3E3E19089648000E174E /* AppDelegate.m in Sources */,
 				B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */,
-				D9F16BD1190F30610016DE9D /* itemViewController.m in Sources */,
 				B578940719144AE800E3FB1E /* MapAnnotation.m in Sources */,
 				B5789404191444B800E3FB1E /* locationViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
