@@ -20,6 +20,7 @@
     myStore.color = colorlist;
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Color Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)redSelect:(id)sender {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22FAF3D11915B4680011EFB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FAF3D01915B4680011EFB1 /* Parse.framework */; };
 		B57893FF191435B400E3FB1E /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57893FE191435B400E3FB1E /* ColorViewController.m */; };
 		B5789401191440A100E3FB1E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5789400191440A100E3FB1E /* MapKit.framework */; };
 		B5789404191444B800E3FB1E /* locationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5789403191444B800E3FB1E /* locationViewController.m */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22FAF3D01915B4680011EFB1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B57893FD191435B400E3FB1E /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		B57893FE191435B400E3FB1E /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 		B5789400191440A100E3FB1E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -120,6 +122,7 @@
 				D9F16BCC190F2FD20016DE9D /* StoreKit.framework in Frameworks */,
 				D9F16BCA190F2FCB0016DE9D /* Security.framework in Frameworks */,
 				D9F16BC8190F2FC40016DE9D /* QuartzCore.framework in Frameworks */,
+				22FAF3D11915B4680011EFB1 /* Parse.framework in Frameworks */,
 				D9F16BC6190F2FBF0016DE9D /* MobileCoreServices.framework in Frameworks */,
 				D9F16BC4190F2FB80016DE9D /* libz.dylib in Frameworks */,
 				B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */,
@@ -167,6 +170,7 @@
 		D98D3E2C19089648000E174E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22FAF3D01915B4680011EFB1 /* Parse.framework */,
 				B5789400191440A100E3FB1E /* MapKit.framework */,
 				B5DF0C101911A88B00029F29 /* MessageUI.framework */,
 				B5DF0C0E19119ECA00029F29 /* Parse.framework */,
@@ -486,11 +490,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt/Parse.framework/Versions/1.2.19/**",
+				);
 				INFOPLIST_FILE = "FoundIt/FoundIt-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -504,11 +514,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt/Parse.framework/Versions/1.2.19/**",
+				);
 				INFOPLIST_FILE = "FoundIt/FoundIt-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
