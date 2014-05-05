@@ -10,6 +10,7 @@
 
 @implementation Store
 @synthesize color;
+@synthesize item;
 static Store *sharedStore = nil;
 
 // Store* myStore = [Store sharedStore];
