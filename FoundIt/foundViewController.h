@@ -10,8 +10,10 @@
 #import "Store.h"
 @interface foundViewController : UITableViewController{
     NSMutableArray *passedColor;
+    NSString *item;
 }
 @property (weak, nonatomic) IBOutlet UILabel *colorchange;
-
+@property (weak, nonatomic) IBOutlet UILabel *itemSelected;
 - (IBAction)contentview:(id)sender;
+- (IBAction)AddItem:(id)sender;
 @end

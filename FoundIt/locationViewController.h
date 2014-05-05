@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "Store.h"
 
-@interface locationViewController : UIViewController
+@interface locationViewController : UIViewController{
+    NSString *longtitude;
+    NSString *latitude;
+}
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 

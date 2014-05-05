@@ -27,6 +27,7 @@
 		D98D3E5719089648000E174E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D98D3E5519089648000E174E /* InfoPlist.strings */; };
 		D98D3E5919089648000E174E /* FoundItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D98D3E5819089648000E174E /* FoundItTests.m */; };
 		D9A58D5A1908BAF800912633 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A58D591908BAF800912633 /* homeViewController.m */; };
+		D9E8A7A819182ED200A0EDB5 /* cameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E8A7A719182ED200A0EDB5 /* cameraViewController.m */; };
 		D9F16BBE190F2F910016DE9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */; };
 		D9F16BC0190F2F960016DE9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BBF190F2F960016DE9D /* CFNetwork.framework */; };
 		D9F16BC2190F2FA50016DE9D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */; };
@@ -84,6 +85,8 @@
 		D98D3E5819089648000E174E /* FoundItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundItTests.m; sourceTree = "<group>"; };
 		D9A58D581908BAF800912633 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		D9A58D591908BAF800912633 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		D9E8A7A619182ED200A0EDB5 /* cameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraViewController.h; sourceTree = "<group>"; };
+		D9E8A7A719182ED200A0EDB5 /* cameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraViewController.m; sourceTree = "<group>"; };
 		D9F16BBD190F2F910016DE9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D9F16BBF190F2F960016DE9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9F16BC1190F2FA40016DE9D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -193,6 +196,8 @@
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
 				D9F16BE619158AC30016DE9D /* itemsViewController.h */,
+				D9E8A7A619182ED200A0EDB5 /* cameraViewController.h */,
+				D9E8A7A719182ED200A0EDB5 /* cameraViewController.m */,
 				D9F16BE719158AC30016DE9D /* itemsViewController.m */,
 				B578940519144AE800E3FB1E /* MapAnnotation.h */,
 				B578940619144AE800E3FB1E /* MapAnnotation.m */,
@@ -353,6 +358,7 @@
 				B578940719144AE800E3FB1E /* MapAnnotation.m in Sources */,
 				B5789404191444B800E3FB1E /* locationViewController.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
+				D9E8A7A819182ED200A0EDB5 /* cameraViewController.m in Sources */,
 				D9F16BE5191586030016DE9D /* foundViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

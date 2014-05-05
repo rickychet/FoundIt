@@ -11,6 +11,7 @@
 @implementation Store
 @synthesize color;
 @synthesize item;
+@synthesize coordinates;
 static Store *sharedStore = nil;
 
 // Store* myStore = [Store sharedStore];

@@ -11,8 +11,10 @@
 @interface Store : NSObject{
     NSMutableArray *color;
     NSString *item;
+    NSArray *coordinates;
 }
 @property(nonatomic,strong)NSMutableArray* color;
 @property(strong,nonatomic)NSString *item;
+@property(strong,nonatomic)NSArray *coordinates;
 + (Store *) sharedStore;
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "foundViewController.h"
+#import <Parse/Parse.h>
 
-@interface foundViewController ()
+@interface foundViewController (){
+    NSString *colors;
+}
 
 @end
 
@@ -43,11 +46,15 @@
 - (IBAction)contentview:(id)sender {
     Store* myStore = [Store sharedStore];
     passedColor = myStore.color;
-    NSString *colors = @"";
+    item = myStore.item;
+    colors = @"";
     for(int i = 0; i<passedColor.count;i++){
         colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
     _colorchange.text =colors;
+    _itemSelected.text = item;
 
 }
+
+
 @end
