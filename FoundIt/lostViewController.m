@@ -28,6 +28,21 @@
 
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:TRUE];
+    
+    Store* myStore = [Store sharedStore];
+    passedColor = myStore.color;
+    item = myStore.item;
+    NSString *colors = @"";
+    for(int i = 0; i<passedColor.count;i++){
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+    }
+    _colorchange.text =colors;
+    _itemSelected.text = item;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

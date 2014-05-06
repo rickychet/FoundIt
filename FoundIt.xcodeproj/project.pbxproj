@@ -490,6 +490,7 @@
 					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
+					/Users/mlee44/cs407/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
@@ -510,6 +511,7 @@
 					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
+					/Users/mlee44/cs407/FoundIt,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundIt/FoundIt-Prefix.pch";
