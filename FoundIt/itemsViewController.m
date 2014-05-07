@@ -7,6 +7,7 @@
 //
 
 #import "itemsViewController.h"
+#import "FoundStore.h"
 
 @interface itemsViewController (){
     NSArray *itemlist;
@@ -44,12 +45,19 @@
 
 
 - (IBAction)submit:(id)sender {
-    Store* myStore = [Store sharedStore];
-    myStore.item = seleted;
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Item Type Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alert show];
-    [self.navigationController popViewControllerAnimated:YES];
-
+    if(_lostSegue){
+        Store* myStore = [Store sharedStore];
+        myStore.item = seleted;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Item Type Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        FoundStore* myStore = [FoundStore sharedStore];
+        myStore.item = seleted;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Item Type Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 
 }
 @end

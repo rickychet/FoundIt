@@ -73,7 +73,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h4a-Zg-kZ7">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h4a-Zg-kZ7">
                                                     <rect key="frame" x="241" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -83,7 +83,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BLu-KD-yxx" kind="push" id="3nc-7y-vUT"/>
+                                            <segue destination="BLu-KD-yxx" kind="push" identifier="LostType" id="3nc-7y-vUT"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -135,7 +135,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RfB-vi-0z2">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RfB-vi-0z2">
                                                     <rect key="frame" x="241" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -145,7 +145,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ddX-N2-wuB" kind="push" id="aZ4-qj-e60"/>
+                                            <segue destination="ddX-N2-wuB" kind="push" identifier="LostColor" id="aZ4-qj-e60"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -177,17 +177,9 @@
                             <outlet property="delegate" destination="SAx-9E-RRR" id="Axm-42-ywG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lost" id="UrZ-QV-4yc">
-                        <barButtonItem key="rightBarButtonItem" title="Update" id="Ow3-Gb-MDg">
-                            <connections>
-                                <action selector="viewContent:" destination="SAx-9E-RRR" id="XOY-FD-Yb3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fmd-RZ-esR">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </refreshControl>
+                    <navigationItem key="navigationItem" title="Lost" id="UrZ-QV-4yc"/>
                     <connections>
+                        <outlet property="addLostItemButton" destination="wEk-lp-SQb" id="FHj-h8-BFy"/>
                         <outlet property="colorchange" destination="RfB-vi-0z2" id="Uob-FH-AeA"/>
                         <outlet property="itemSelected" destination="h4a-Zg-kZ7" id="Ooi-ru-ldh"/>
                     </connections>
@@ -924,7 +916,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mig-Tr-a0R">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mig-Tr-a0R">
                                                     <rect key="frame" x="241" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -986,7 +978,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uzp-FR-G7d">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uzp-FR-G7d">
                                                     <rect key="frame" x="241" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -996,7 +988,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ddX-N2-wuB" kind="push" id="PPK-vR-KWf"/>
+                                            <segue destination="ddX-N2-wuB" kind="push" identifier="FoundColor" id="PPK-vR-KWf"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1048,7 +1040,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PLY-8a-ofs">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PLY-8a-ofs">
                                                     <rect key="frame" x="241" y="29" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1090,13 +1082,7 @@
                             <outlet property="delegate" destination="Kel-of-gfo" id="fUj-dQ-VXm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Found" id="QVY-qD-tUj">
-                        <barButtonItem key="rightBarButtonItem" title="Update" id="usF-n6-vj3">
-                            <connections>
-                                <action selector="contentview:" destination="Kel-of-gfo" id="596-XM-R1M"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Found" id="QVY-qD-tUj"/>
                     <connections>
                         <outlet property="colorchange" destination="uzp-FR-G7d" id="u3x-iv-wSA"/>
                         <outlet property="itemSelected" destination="mig-Tr-a0R" id="rFe-80-Hp7"/>
@@ -1203,7 +1189,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3nc-7y-vUT"/>
-        <segue reference="ulB-9R-kuZ"/>
-        <segue reference="aZ4-qj-e60"/>
+        <segue reference="E01-gi-rUf"/>
+        <segue reference="PPK-vR-KWf"/>
     </inferredMetricsTieBreakers>
 </document>

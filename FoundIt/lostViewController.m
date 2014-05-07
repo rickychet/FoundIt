@@ -7,6 +7,8 @@
 //
 
 #import "lostViewController.h"
+#import "ColorViewController.h"
+#import "itemsViewController.h"
 
 @interface lostViewController ()
 
@@ -25,7 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    Store* myStore = [Store sharedStore];
+    passedColor = myStore.color;
+    item = myStore.item;
+    NSString *colors = @"";
+    for(int i = 0; i<passedColor.count;i++){
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+    }
+    _colorchange.text = colors;
+    _itemSelected.text = item;
 
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -39,9 +52,11 @@
     for(int i = 0; i<passedColor.count;i++){
         colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text =colors;
+    _colorchange.text = colors;
     _itemSelected.text = item;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -61,5 +76,17 @@
     _colorchange.text =colors;
     _itemSelected.text = item;
     
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"LostColor"]){
+        ColorViewController *next = (ColorViewController*)segue.destinationViewController;
+        next.lostSegue = true;
+    }
+    else if([segue.identifier isEqualToString:@"LostType"]){
+        itemsViewController *next = (itemsViewController*)segue.destinationViewController;
+        next.lostSegue = true;
+    }
+
 }
 @end

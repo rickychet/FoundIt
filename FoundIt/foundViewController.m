@@ -29,6 +29,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    FoundStore* myStore = [FoundStore sharedStore];
+    passedColor = myStore.color;
+    item = myStore.item;
+    NSString *colors = @"";
+    for(int i = 0; i<passedColor.count;i++){
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+    }
+    _colorchange.text =colors;
+    _itemSelected.text = item;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,7 +51,7 @@
 {
     [super viewDidAppear:TRUE];
     
-    Store* myStore = [Store sharedStore];
+    FoundStore* myStore = [FoundStore sharedStore];
     passedColor = myStore.color;
     item = myStore.item;
     NSString *colors = @"";
@@ -58,18 +68,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)contentview:(id)sender {
-    Store* myStore = [Store sharedStore];
-    passedColor = myStore.color;
-    item = myStore.item;
-    colors = @"";
-    for(int i = 0; i<passedColor.count;i++){
-        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
-    }
-    _colorchange.text =colors;
-    _itemSelected.text = item;
 
-}
 
 
 @end

@@ -12,6 +12,7 @@
     
 }
 @property (strong, nonatomic) IBOutlet UITableView *items;
+@property(assign,nonatomic) BOOL lostSegue;
 - (IBAction)submit:(id)sender;
 
 

@@ -16,11 +16,19 @@
 @synthesize colorlist;
 
 - (IBAction)passData:(id)sender {
-    Store* myStore = [Store sharedStore];
-    myStore.color = colorlist;
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Color Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [self.navigationController popViewControllerAnimated:YES];
-    [alert show];
+    if(_lostSegue){
+        Store* myStore = [Store sharedStore];
+        myStore.color = colorlist;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Color Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        [alert show];
+    }else{
+        FoundStore* myStore = [FoundStore sharedStore];
+        myStore.color = colorlist;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Color Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        [alert show];
+    }
 }
 
 - (IBAction)redSelect:(id)sender {

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Store.h"
+#import "FoundStore.h"
 @interface ColorViewController : UITableViewController{
     IBOutlet UISwitch *red;
     IBOutlet UISwitch *orange;
@@ -36,4 +37,5 @@
 - (IBAction)clearSelect:(id)sender;
 
 @property(nonatomic,retain) NSMutableArray *colorlist;
+@property(assign,nonatomic) BOOL lostSegue;
 @end

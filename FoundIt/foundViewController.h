@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Store.h"
+#import "FoundStore.h"
 @interface foundViewController : UITableViewController{
     NSMutableArray *passedColor;
     NSString *item;
