@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface Store : NSObject{
     NSMutableArray *color;
     NSString *item;
-    NSArray *coordinates;
+    CLLocationCoordinate2D coordinates;
 }
 @property(nonatomic,strong)NSMutableArray* color;
 @property(strong,nonatomic)NSString *item;
-@property(strong,nonatomic)NSArray *coordinates;
+@property(assign,nonatomic)CLLocationCoordinate2D  coordinates;
 + (Store *) sharedStore;
 @end

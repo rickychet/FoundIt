@@ -8,6 +8,7 @@
 
 #import "locationViewController.h"
 #import "MapAnnotation.h"
+#import "FoundStore.h"
 
 @interface locationViewController ()
 
@@ -16,7 +17,7 @@
 @implementation locationViewController
 
 //pin with the location of the item
-MapAnnotation *location;
+//MapAnnotation *location;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +33,22 @@ MapAnnotation *location;
     [super viewDidLoad];
     [self.mapView setDelegate:self];
     [self addGestureRecogniserToMapView];
+    
+    _location = [[MapAnnotation alloc]init];
+    if(_segueType == 0){
+        Store* myStore = [Store sharedStore];
+        _location.coordinate = myStore.coordinates;
+        [self.mapView addAnnotation:_location];
+    }else if(_segueType == 1){
+        FoundStore* myStore = [FoundStore sharedStore];
+        _location.coordinate = myStore.foundLocation;
+        [self.mapView addAnnotation:_location];
+    }else if(_segueType == 2){
+        FoundStore* myStore = [FoundStore sharedStore];
+        _location.coordinate = myStore.turnInLocation;
+        [self.mapView addAnnotation:_location];
+    }
+    
 }
 
 - (void)addGestureRecogniserToMapView{
@@ -53,16 +70,16 @@ MapAnnotation *location;
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     
     //remove old pin
-    [self.mapView removeAnnotation: location];
+    [self.mapView removeAnnotation: _location];
     
     //creaet new pin
-    location = [[MapAnnotation alloc]init];
+    _location = [[MapAnnotation alloc]init];
     
-    location.coordinate = touchMapCoordinate;
+    _location.coordinate = touchMapCoordinate;
     //location.subtitle = @"Subtitle";
     //location.title = @"Title";
     
-    [self.mapView addAnnotation:location];
+    [self.mapView addAnnotation:_location];
     
 }
 
@@ -76,4 +93,25 @@ MapAnnotation *location;
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)submit:(id)sender {
+    if(_segueType == 0){
+        Store* myStore = [Store sharedStore];
+        myStore.coordinates = _location.coordinate;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Location Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        [alert show];
+    }else if(_segueType == 1){
+        FoundStore* myStore = [FoundStore sharedStore];
+        myStore.foundLocation = _location.coordinate;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Location Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        [alert show];
+    }else if(_segueType == 2){
+        FoundStore* myStore = [FoundStore sharedStore];
+        myStore.turnInLocation = _location.coordinate;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Location Saved" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        [alert show];
+    }
+}
 @end

@@ -9,6 +9,7 @@
 #import "lostViewController.h"
 #import "ColorViewController.h"
 #import "itemsViewController.h"
+#import "locationViewController.h"
 
 @interface lostViewController ()
 
@@ -86,6 +87,9 @@
     else if([segue.identifier isEqualToString:@"LostType"]){
         itemsViewController *next = (itemsViewController*)segue.destinationViewController;
         next.lostSegue = true;
+    }else if([segue.identifier isEqualToString:@"LostLocation"]){
+        locationViewController *next = (locationViewController*)segue.destinationViewController;
+        next.segueType = 0;
     }
 
 }

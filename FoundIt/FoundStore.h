@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface FoundStore : NSObject{
 NSMutableArray *color;
 NSString *item;
-NSArray *coordinates;
-    NSArray *turnInLocation;
+CLLocationCoordinate2D foundLocation;
+    CLLocationCoordinate2D turnInLocation;
 }
 @property(nonatomic,strong)NSMutableArray* color;
 @property(strong,nonatomic)NSString *item;
-@property(strong,nonatomic)NSArray *foundLocation;
-@property(strong, nonatomic)NSArray *turnInLocation;
+@property(assign,nonatomic)CLLocationCoordinate2D foundLocation;
+@property(assign, nonatomic)CLLocationCoordinate2D turnInLocation;
+
 
 + (FoundStore *) sharedStore;
 @end

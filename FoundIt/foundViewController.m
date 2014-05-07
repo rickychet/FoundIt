@@ -8,6 +8,7 @@
 
 #import "foundViewController.h"
 #import <Parse/Parse.h>
+#import "locationViewController.h"
 
 @interface foundViewController (){
     NSString *colors;
@@ -68,7 +69,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"FoundLocation"]){
+        locationViewController *next = (locationViewController*)segue.destinationViewController;
+        next.segueType = 1;
+    }
+    else if([segue.identifier isEqualToString:@"TurnIn"]){
+        locationViewController *next = (locationViewController*)segue.destinationViewController;
+        next.segueType = 2;
+    }
+}
 
 
 @end
