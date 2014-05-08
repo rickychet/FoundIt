@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *colorchange;
 @property (weak, nonatomic) IBOutlet UILabel *itemSelected;
 - (IBAction)viewContent:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableViewCell *locationCell;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UITableViewCell *addLostItemButton;
 @end

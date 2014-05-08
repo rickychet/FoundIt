@@ -40,7 +40,17 @@
     }
     _colorchange.text =colors;
     _itemSelected.text = item;
+    
+    if(myStore.foundLocation.latitude != 0.0){
+        _foundLocationLabel.hidden = true;
+        _foundLocationCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 
+    if(myStore.turnInLocation.latitude != 0.0){
+        _turnInLabel.hidden = true;
+        _turnInCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -61,6 +71,16 @@
     }
     _colorchange.text =colors;
     _itemSelected.text = item;
+    
+    if(myStore.foundLocation.latitude != 0.0){
+        _foundLocationLabel.hidden = true;
+        _foundLocationCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
+    if(myStore.turnInLocation.latitude != 0.0){
+        _turnInLabel.hidden = true;
+        _turnInCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 }
 
 - (void)didReceiveMemoryWarning

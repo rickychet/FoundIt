@@ -14,6 +14,9 @@
 }
 @property (weak, nonatomic) IBOutlet UILabel *colorchange;
 @property (weak, nonatomic) IBOutlet UILabel *itemSelected;
-- (IBAction)contentview:(id)sender;
 - (IBAction)AddItem:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *foundLocationLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *foundLocationCell;
+@property (weak, nonatomic) IBOutlet UILabel *turnInLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *turnInCell;
 @end

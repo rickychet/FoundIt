@@ -38,6 +38,10 @@
     }
     _colorchange.text = colors;
     _itemSelected.text = item;
+    if(myStore.coordinates.latitude != 0.0){
+        _locationLabel.hidden = true;
+        _locationCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 
     
 }
@@ -55,6 +59,11 @@
     }
     _colorchange.text = colors;
     _itemSelected.text = item;
+    if(myStore.coordinates.latitude != 0.0){
+        _locationLabel.hidden = true;
+        _locationCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+
 }
 
 
