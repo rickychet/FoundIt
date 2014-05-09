@@ -102,4 +102,22 @@
     }
 
 }
+- (IBAction)clearFields:(id)sender {
+    Store* myStore = [Store sharedStore];
+    myStore.item = NULL;
+    myStore.color = NULL;
+    myStore.coordinates = CLLocationCoordinate2DMake(0.0, 0.0);
+    
+    //update the views
+    passedColor = myStore.color;
+    item = myStore.item;
+    NSString *colors = @"";
+    for(int i = 0; i<passedColor.count;i++){
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+    }
+    _colorchange.text =colors;
+    _itemSelected.text = item;
+    _locationLabel.hidden = false;
+    _locationCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
 @end

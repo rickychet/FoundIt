@@ -129,4 +129,29 @@
     return YES;
 }
 
+
+- (IBAction)clearFields:(id)sender {
+    FoundStore* myStore = [FoundStore sharedStore];
+    myStore.item = NULL;
+    myStore.color = NULL;
+    myStore.turnInLocation = CLLocationCoordinate2DMake(0.0, 0.0);
+    myStore.foundLocation = CLLocationCoordinate2DMake(0.0, 0.0);
+    myStore.description = NULL;
+     _descriptionText.text = @"Briefly describe the item you found and where you turned it in.";
+    
+    //update the views
+    passedColor = myStore.color;
+    item = myStore.item;
+    NSString *colors = @"";
+    for(int i = 0; i<passedColor.count;i++){
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+    }
+    _colorchange.text =colors;
+    _itemSelected.text = item;
+    _turnInLabel.hidden = false;
+    _turnInCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    _foundLocationLabel.hidden = false;
+    _foundLocationCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+}
 @end

@@ -177,7 +177,13 @@
                             <outlet property="delegate" destination="SAx-9E-RRR" id="Axm-42-ywG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lost" id="UrZ-QV-4yc"/>
+                    <navigationItem key="navigationItem" title="Lost" id="UrZ-QV-4yc">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="ujV-Cn-DeK">
+                            <connections>
+                                <action selector="clearFields:" destination="SAx-9E-RRR" id="jx4-jj-QIt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addLostItemButton" destination="wEk-lp-SQb" id="FHj-h8-BFy"/>
                         <outlet property="colorchange" destination="RfB-vi-0z2" id="Uob-FH-AeA"/>
@@ -1106,8 +1112,15 @@
                             <outlet property="delegate" destination="Kel-of-gfo" id="fUj-dQ-VXm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Found" id="QVY-qD-tUj"/>
+                    <navigationItem key="navigationItem" title="Found" id="QVY-qD-tUj">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="SOo-ka-6x6">
+                            <connections>
+                                <action selector="clearFields:" destination="Kel-of-gfo" id="xNu-MN-R0G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="clearButton" destination="SOo-ka-6x6" id="mzg-D7-9bS"/>
                         <outlet property="colorchange" destination="uzp-FR-G7d" id="u3x-iv-wSA"/>
                         <outlet property="descriptionText" destination="VmJ-tF-aGY" id="2BL-w4-oOE"/>
                         <outlet property="foundLocationCell" destination="TjL-Qg-52H" id="72p-Cu-WT1"/>
