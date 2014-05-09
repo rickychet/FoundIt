@@ -155,14 +155,15 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 6){
+    FoundStore* myStore = [FoundStore sharedStore];
+    
+    if(indexPath.section == 6 ){
         NSLog(@"add");
-        
-        FoundStore* myStore = [FoundStore sharedStore];
+        if(myStore.color != nil && myStore.item !=nil && myStore.foundLocation.latitude !=0 && myStore.foundLocation.longitude !=0 && myStore.turnInLocation.latitude !=0 && myStore.turnInLocation.longitude != 0 && myStore.description != nil){
         PFObject *foundObject = [PFObject objectWithClassName:@"foundObject"];
-        foundObject[@"colors"]=myStore.color;
-        foundObject[@"itemType"]= myStore.item;
+                       foundObject[@"colors"]=myStore.color;
         
+        foundObject[@"itemType"]= myStore.item;
 
         PFGeoPoint *foundLocation = [PFGeoPoint geoPointWithLatitude:myStore.foundLocation.latitude longitude:myStore.foundLocation.longitude];
         foundObject[@"foundLocation"] = foundLocation;
@@ -174,11 +175,14 @@
        
         foundObject[@"decsription"] = myStore.description;
         [foundObject saveInBackground];
-        
 
         
         [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please fill things in all the fields" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
 
+        }
     }
     
 }
