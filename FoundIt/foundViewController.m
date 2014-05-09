@@ -11,7 +11,6 @@
 #import "locationViewController.h"
 
 @interface foundViewController (){
-    NSString *colors;
 }
 
 @end
@@ -154,4 +153,35 @@
     _foundLocationCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 6){
+        NSLog(@"add");
+        
+        FoundStore* myStore = [FoundStore sharedStore];
+        PFObject *foundObject = [PFObject objectWithClassName:@"foundObject"];
+        foundObject[@"colors"]=myStore.color;
+        foundObject[@"itemType"]= myStore.item;
+        
+
+        PFGeoPoint *foundLocation = [PFGeoPoint geoPointWithLatitude:myStore.foundLocation.latitude longitude:myStore.foundLocation.longitude];
+        foundObject[@"foundLocation"] = foundLocation;
+        
+        NSNumber *turnInLocationLatitude  = [[NSNumber alloc]initWithDouble: myStore.turnInLocation.latitude];
+        NSNumber *turnInLocationLongitude = [[NSNumber alloc]initWithDouble:myStore.turnInLocation.longitude];
+        foundObject[@"turnInLocationLatitude"] = turnInLocationLatitude;
+        foundObject[@"turnInLocationLongitude"] = turnInLocationLongitude;
+       
+        foundObject[@"decsription"] = myStore.description;
+        [foundObject saveInBackground];
+        
+
+        
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }
+    
+}
+
+
 @end
