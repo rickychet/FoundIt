@@ -66,7 +66,7 @@
     }
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *encrypted = [defaults dataForKey:@"1"];
+    NSData *encrypted = [defaults dataForKey:@"0"];
     lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
     NSLog(@"%@", lost.type);
 
