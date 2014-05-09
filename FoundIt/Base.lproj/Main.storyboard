@@ -193,11 +193,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addLostItemButton" destination="wEk-lp-SQb" id="FHj-h8-BFy"/>
                         <outlet property="colorchange" destination="RfB-vi-0z2" id="Uob-FH-AeA"/>
                         <outlet property="itemSelected" destination="h4a-Zg-kZ7" id="Ooi-ru-ldh"/>
                         <outlet property="locationCell" destination="Jr1-Q6-klg" id="ud8-vd-cUz"/>
                         <outlet property="locationLabel" destination="vc5-qR-rUV" id="NW6-z7-mGO"/>
+                        <outlet property="table" destination="18o-bW-QzP" id="FVS-ij-Exl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6he-uf-VfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1245,8 +1245,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PPK-vR-KWf"/>
-        <segue reference="HJp-w4-J15"/>
-        <segue reference="E01-gi-rUf"/>
+        <segue reference="aZ4-qj-e60"/>
+        <segue reference="ulB-9R-kuZ"/>
+        <segue reference="3nc-7y-vUT"/>
     </inferredMetricsTieBreakers>
 </document>

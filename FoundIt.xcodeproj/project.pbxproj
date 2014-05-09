@@ -14,6 +14,8 @@
 		B5B5D29A191AE6DC00233EB8 /* FoundStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B5D299191AE6DC00233EB8 /* FoundStore.m */; };
 		B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C0E19119ECA00029F29 /* Parse.framework */; };
 		B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C101911A88B00029F29 /* MessageUI.framework */; };
+		D91C2429191D735400CB8CE7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91C2428191D735400CB8CE7 /* CoreData.framework */; };
+		D91C242C191D7AE000CB8CE7 /* lostItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D91C242B191D7AE000CB8CE7 /* lostItem.m */; };
 		D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2D19089648000E174E /* Foundation.framework */; };
 		D98D3E3019089648000E174E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2F19089648000E174E /* CoreGraphics.framework */; };
 		D98D3E3219089648000E174E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E3119089648000E174E /* UIKit.framework */; };
@@ -68,6 +70,9 @@
 		B5B5D299191AE6DC00233EB8 /* FoundStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundStore.m; sourceTree = "<group>"; };
 		B5DF0C0E19119ECA00029F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B5DF0C101911A88B00029F29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D91C2428191D735400CB8CE7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D91C242A191D7AE000CB8CE7 /* lostItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lostItem.h; sourceTree = "<group>"; };
+		D91C242B191D7AE000CB8CE7 /* lostItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lostItem.m; sourceTree = "<group>"; };
 		D98D3E2A19089648000E174E /* FoundIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoundIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98D3E2D19089648000E174E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D98D3E2F19089648000E174E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91C2429191D735400CB8CE7 /* CoreData.framework in Frameworks */,
 				B5789401191440A100E3FB1E /* MapKit.framework in Frameworks */,
 				B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */,
 				D9F16BCE190F2FDB0016DE9D /* SystemConfiguration.framework in Frameworks */,
@@ -170,6 +176,7 @@
 		D98D3E2C19089648000E174E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D91C2428191D735400CB8CE7 /* CoreData.framework */,
 				B5789400191440A100E3FB1E /* MapKit.framework */,
 				B5DF0C101911A88B00029F29 /* MessageUI.framework */,
 				B5DF0C0E19119ECA00029F29 /* Parse.framework */,
@@ -212,6 +219,8 @@
 				B57893FE191435B400E3FB1E /* ColorViewController.m */,
 				D9F16BD2190F33890016DE9D /* lostViewController.h */,
 				D9F16BD3190F33890016DE9D /* lostViewController.m */,
+				D91C242A191D7AE000CB8CE7 /* lostItem.h */,
+				D91C242B191D7AE000CB8CE7 /* lostItem.m */,
 				D9F16BE3191586030016DE9D /* foundViewController.h */,
 				D9F16BE4191586030016DE9D /* foundViewController.m */,
 				D9A58D581908BAF800912633 /* homeViewController.h */,
@@ -364,6 +373,7 @@
 				B5789404191444B800E3FB1E /* locationViewController.m in Sources */,
 				B5B5D29A191AE6DC00233EB8 /* FoundStore.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
+				D91C242C191D7AE000CB8CE7 /* lostItem.m in Sources */,
 				D9E8A7A819182ED200A0EDB5 /* cameraViewController.m in Sources */,
 				D9F16BE5191586030016DE9D /* foundViewController.m in Sources */,
 			);

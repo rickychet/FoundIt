@@ -10,7 +10,8 @@
 #import "ColorViewController.h"
 #import "itemsViewController.h"
 #import "locationViewController.h"
-
+#import <CoreData/CoreData.h>
+#import "lostItem.h"
 @interface lostViewController ()
 
 @end
@@ -120,4 +121,36 @@
     _locationLabel.hidden = false;
     _locationCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 3){
+        Store* myStore = [Store sharedStore];
+
+        if(myStore.color != nil && myStore.item != nil && myStore.coordinates.latitude != 0 && myStore.coordinates.longitude != 0){
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSMutableArray *lostItems;
+        if([defaults objectForKey:@"lostItems"]){
+            lostItems = [defaults objectForKey:@"lostItems"];
+            
+        }
+        else{
+            lostItems = [[NSMutableArray alloc]init];
+        }
+        lostItem *lost = [[lostItem alloc]init];
+        lost.color = myStore.color;
+        lost.type = myStore.item;
+        lost.location = myStore.coordinates;
+        NSData *lostI = [NSKeyedArchiver archivedDataWithRootObject:lost];
+        [defaults setObject:lostI forKey:@"lostItems"];
+        [defaults synchronize];
+        [self.navigationController popViewControllerAnimated:YES];
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please fill things in all the fields" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+        }
+    }
+}
+
+
 @end
