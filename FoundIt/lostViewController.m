@@ -64,6 +64,11 @@
         _locationLabel.hidden = true;
         _locationCell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encrypted = [defaults dataForKey:@"1"];
+    lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
+    NSLog(@"%@", lost.type);
 
 }
 
@@ -128,21 +133,31 @@
 
         if(myStore.color != nil && myStore.item != nil && myStore.coordinates.latitude != 0 && myStore.coordinates.longitude != 0){
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSMutableArray *lostItems;
-        if([defaults objectForKey:@"lostItems"]){
-            lostItems = [defaults objectForKey:@"lostItems"];
-            
+            NSInteger count;
+        if([defaults integerForKey:@"count"]){
+            count = [defaults integerForKey:@"count"];
         }
         else{
-            lostItems = [[NSMutableArray alloc]init];
+            count = 0;
         }
         lostItem *lost = [[lostItem alloc]init];
-        lost.color = myStore.color;
+        lost.color =(NSArray*) myStore.color;
         lost.type = myStore.item;
-        lost.location = myStore.coordinates;
+
+        lost.locationLatitude = [[NSNumber alloc] initWithDouble:myStore.coordinates.latitude];
+        lost.locationLongitude = [[NSNumber alloc] initWithDouble:myStore.coordinates.longitude];
         NSData *lostI = [NSKeyedArchiver archivedDataWithRootObject:lost];
-        [defaults setObject:lostI forKey:@"lostItems"];
+        NSString *itemName = [[NSString alloc]initWithFormat:@"%d",count];
+        count++;
+        [defaults setInteger:count forKey:@"count"];
+        [defaults setObject:lostI forKey:itemName];
         [defaults synchronize];
+            
+            //clear the fields
+            myStore.item = NULL;
+            myStore.color = NULL;
+            myStore.coordinates = CLLocationCoordinate2DMake(0.0, 0.0);
+            
         [self.navigationController popViewControllerAnimated:YES];
         }
         else{

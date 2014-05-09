@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
-@interface lostItem : NSObject{
-    NSMutableArray *color;
+@interface lostItem : NSObject<NSCoding>{
+    NSArray *color;
     NSString *type;
-    CLLocationCoordinate2D location;
+    NSNumber *locationLatitude;
+    NSNumber *locationLongitude;
+
 }
-@property(strong, nonatomic)NSMutableArray *color;
+@property(strong, nonatomic)NSArray *color;
 @property(strong,nonatomic)NSString *type;
-@property(assign,nonatomic)CLLocationCoordinate2D location;
+@property(strong,nonatomic)NSNumber *locationLatitude;
+@property(strong,nonatomic)NSNumber *locationLongitude;
+
 
 @end
