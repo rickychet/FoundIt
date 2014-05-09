@@ -136,7 +136,7 @@
     myStore.turnInLocation = CLLocationCoordinate2DMake(0.0, 0.0);
     myStore.foundLocation = CLLocationCoordinate2DMake(0.0, 0.0);
     myStore.description = NULL;
-     _descriptionText.text = @"Briefly describe the item you found and where you turned it in.";
+     _descriptionText.text = Nil;
     
     //update the views
     passedColor = myStore.color;
@@ -176,7 +176,14 @@
         foundObject[@"decsription"] = myStore.description;
         [foundObject saveInBackground];
 
-        
+            myStore.item = NULL;
+            myStore.color = NULL;
+            myStore.turnInLocation = CLLocationCoordinate2DMake(0.0, 0.0);
+            myStore.foundLocation = CLLocationCoordinate2DMake(0.0, 0.0);
+            myStore.description = NULL;
+            _descriptionText.text = Nil;
+            
+            
         [self.navigationController popViewControllerAnimated:YES];
         }else{
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please fill things in all the fields" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];

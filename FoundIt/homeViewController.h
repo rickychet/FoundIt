@@ -11,5 +11,6 @@
 @interface homeViewController : UIViewController{
     
 }
+@property (weak, nonatomic) IBOutlet UITableView *display;
 
 @end

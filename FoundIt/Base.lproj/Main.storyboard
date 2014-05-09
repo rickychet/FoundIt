@@ -39,10 +39,18 @@
                                     <segue destination="Kel-of-gfo" kind="push" id="8eP-2i-XEM"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PxS-zD-LgJ">
+                                <rect key="frame" x="0.0" y="132" width="326" height="387"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="g4D-Ch-ALl"/>
+                    <connections>
+                        <outlet property="display" destination="PxS-zD-LgJ" id="ZeP-Qj-tKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XH2-6g-k65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -830,11 +838,11 @@
             </objects>
             <point key="canvasLocation" x="159" y="129"/>
         </scene>
-        <!--Navigation Controller - profile-->
+        <!--Navigation Controller - Settings-->
         <scene sceneID="1Xh-0c-9AW">
             <objects>
                 <navigationController definesPresentationContext="YES" id="6eg-ze-9Ak" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="profile" image="man" id="pFA-jS-EIK"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" id="pFA-jS-EIK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8dK-G9-lhB">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1094,7 +1102,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Add Lost Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-wd-W5V">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Add Found Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-wd-W5V">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1219,13 +1227,13 @@
     <resources>
         <image name="backpack" width="256" height="256"/>
         <image name="earphone" width="128" height="128"/>
+        <image name="gear" width="30" height="30"/>
         <image name="gloves" width="396" height="420"/>
         <image name="hat" width="128" height="128"/>
         <image name="home" width="30" height="30"/>
         <image name="jacket" width="1152" height="749"/>
         <image name="keys" width="512" height="512"/>
         <image name="laptop" width="256" height="256"/>
-        <image name="man" width="30" height="30"/>
         <image name="scarf" width="200" height="200"/>
         <image name="umbrella" width="128" height="128"/>
         <image name="wallet" width="256" height="256"/>
