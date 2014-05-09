@@ -34,11 +34,16 @@
     [self.mapView setDelegate:self];
     [self addGestureRecogniserToMapView];
     
+    MKCoordinateRegion region;
+    MKCoordinateSpan zoom = MKCoordinateSpanMake(0.1, 0.1);
+    CLLocationManager *locMan = [[CLLocationManager alloc] init];
+    region = (MKCoordinateRegion){(locMan.location.coordinate), zoom};
+    [_mapView setRegion:region animated:NO/YES];
+    
     _location = [[MapAnnotation alloc]init];
     if(_segueType == 0){
         Store* myStore = [Store sharedStore];
         _location.coordinate = myStore.coordinates;
-        [self.mapView addAnnotation:_location];
     }else if(_segueType == 1){
         FoundStore* myStore = [FoundStore sharedStore];
         _location.coordinate = myStore.foundLocation;
