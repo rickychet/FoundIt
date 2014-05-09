@@ -1057,16 +1057,38 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="86o-mn-DCv">
+                            <tableViewSection headerTitle="DESCRIPTION" id="86o-mn-DCv">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YNF-Vq-m98">
-                                        <rect key="frame" x="0.0" y="695" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="YNF-Vq-m98">
+                                        <rect key="frame" x="0.0" y="723" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YNF-Vq-m98" id="e1m-l1-hiI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Briefly describe the item you found and where you turned it in." translatesAutoresizingMaskIntoConstraints="NO" id="VmJ-tF-aGY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="zue-Kt-vl5">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Suz-IX-unr">
+                                        <rect key="frame" x="0.0" y="823" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Suz-IX-unr" id="bqE-b4-bbO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Add Lost Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVA-Ga-OkX">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Add Lost Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-wd-W5V">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -1087,6 +1109,7 @@
                     <navigationItem key="navigationItem" title="Found" id="QVY-qD-tUj"/>
                     <connections>
                         <outlet property="colorchange" destination="uzp-FR-G7d" id="u3x-iv-wSA"/>
+                        <outlet property="descriptionText" destination="VmJ-tF-aGY" id="2BL-w4-oOE"/>
                         <outlet property="foundLocationCell" destination="TjL-Qg-52H" id="72p-Cu-WT1"/>
                         <outlet property="foundLocationLabel" destination="Fji-je-5iA" id="5yx-Lv-uzL"/>
                         <outlet property="itemSelected" destination="mig-Tr-a0R" id="rFe-80-Hp7"/>
@@ -1200,8 +1223,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="PPK-vR-KWf"/>
         <segue reference="HJp-w4-J15"/>
         <segue reference="E01-gi-rUf"/>
-        <segue reference="PPK-vR-KWf"/>
     </inferredMetricsTieBreakers>
 </document>

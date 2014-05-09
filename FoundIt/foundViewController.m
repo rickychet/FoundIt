@@ -56,6 +56,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _descriptionText.delegate = self;
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -72,6 +75,7 @@
     _colorchange.text =colors;
     _itemSelected.text = item;
     
+    
     if(myStore.foundLocation.latitude != 0.0){
         _foundLocationLabel.hidden = true;
         _foundLocationCell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -81,6 +85,12 @@
         _turnInLabel.hidden = true;
         _turnInCell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
+    
+    _descriptionText.delegate = self;
+    if( myStore.description){
+        _descriptionText.text = myStore.description;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,5 +110,23 @@
     }
 }
 
+//clears text when textView is touched
+- (void) textViewDidBeginEditing:(UITextView *) textView {
+    [textView setText:@""];
+}
+
+//Makes the return key dismiss the keyboard
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        FoundStore* myStore = [FoundStore sharedStore];
+        myStore.description = textView.text;
+        [textView resignFirstResponder];
+        
+        return NO;
+    }
+    
+    return YES;
+}
 
 @end

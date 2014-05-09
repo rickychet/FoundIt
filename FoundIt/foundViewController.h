@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *foundLocationLabel;
 @property (weak, nonatomic) IBOutlet UITableViewCell *foundLocationCell;
 @property (weak, nonatomic) IBOutlet UILabel *turnInLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionText;
 @property (weak, nonatomic) IBOutlet UITableViewCell *turnInCell;
 @end

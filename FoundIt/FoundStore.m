@@ -12,6 +12,7 @@
 @synthesize color;
 @synthesize item;
 @synthesize foundLocation;
+@synthesize description;
 @synthesize turnInLocation;
 static FoundStore *sharedStore = nil;
 
