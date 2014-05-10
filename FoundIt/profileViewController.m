@@ -28,6 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"stars2"]]];
+    
 
 }
 
@@ -53,6 +54,12 @@
     
     // Present mail view controller on screen
     [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
+- (IBAction)searchR:(id)sender {
+    
+    
     
 }
 
