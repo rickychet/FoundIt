@@ -9,6 +9,7 @@
 #import "homeViewController.h"
 #import "lostItem.h"
 #import <Parse/Parse.h>
+#import "MatchViewController.h"
 @interface homeViewController ()
 
 @end
@@ -112,6 +113,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MatchViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"match"];
+    
+    //remove the correct post from the array here, set controller's post property
+    controller.index = indexPath.row;
+    
+    [self.navigationController pushViewController:controller animated:YES];
     
     
 }

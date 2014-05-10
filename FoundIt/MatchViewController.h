@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MatchViewController : UITableViewController
+@property (assign, nonatomic) NSInteger index;
 
 @end
