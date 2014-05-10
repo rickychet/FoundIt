@@ -26,6 +26,7 @@
 - (IBAction)clearFields:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableViewCell *turnInCell;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UILabel *cameraDetailImage;
 
 
 
