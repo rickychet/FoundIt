@@ -8,6 +8,7 @@
 
 #import "homeViewController.h"
 #import "lostItem.h"
+#import <Parse/Parse.h>
 @interface homeViewController ()
 
 @end
@@ -40,11 +41,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section ==0){
+        
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if([defaults integerForKey:@"count"] ==0){
+            return 1;
+        }
         return [defaults integerForKey:@"count"];
     }
     else{
-        return 0;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        for(int i = 0; i<[defaults integerForKey:@"count"];i++){
+        NSData *encrypted = [defaults dataForKey:[NSString stringWithFormat:@"%d",i]];
+        lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
+
+        PFQuery *query = [PFQuery queryWithClassName:@"foundObject"];
+       // [query whereKey:@"itemType" equalTo:lost.type]
+            
+        }
+        return 1;
     }
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -64,7 +78,13 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
+    if(indexPath.section ==0 ){
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults integerForKey:@"count"]==0){
+        [cell.textLabel setText:@"You don't have anything lost yet"];
+        [cell.detailTextLabel setText:@""];
+    }
+    else{
         NSData *encrypted = [defaults dataForKey:[NSString stringWithFormat:@"%d",indexPath.row]];
         lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
         NSString *type = lost.type;
@@ -75,10 +95,10 @@
         }
         [cell.textLabel setText:type];
         [cell.detailTextLabel setText:color];
-    if(indexPath.section ==1){
-        [cell.textLabel setText:@"match"];
     }
-    
+    }else{
+        [cell.textLabel setText:@"aaaaa"];
+    }
     
     return cell;
 }
