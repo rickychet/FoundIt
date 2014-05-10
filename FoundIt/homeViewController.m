@@ -28,7 +28,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back"]]];
-  //  [self.display reloadData];
 
 }
 
@@ -76,12 +75,19 @@
         }
         [cell.textLabel setText:type];
         [cell.detailTextLabel setText:color];
-    
+    if(indexPath.section ==1){
+        [cell.textLabel setText:@"match"];
+    }
     
     
     return cell;
 }
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        return @"Lost Items";
+    }
+    return @"Matched Items" ;
+}
 
 @end
 
