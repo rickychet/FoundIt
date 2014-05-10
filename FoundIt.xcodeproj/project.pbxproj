@@ -15,6 +15,7 @@
 		B5B5D29A191AE6DC00233EB8 /* FoundStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B5D299191AE6DC00233EB8 /* FoundStore.m */; };
 		B5DF0C0F19119ECA00029F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C0E19119ECA00029F29 /* Parse.framework */; };
 		B5DF0C111911A88B00029F29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DF0C101911A88B00029F29 /* MessageUI.framework */; };
+		C466A987191EC7E100CF05B0 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C466A986191EC7E100CF05B0 /* detailViewController.m */; };
 		D91C2429191D735400CB8CE7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91C2428191D735400CB8CE7 /* CoreData.framework */; };
 		D91C242C191D7AE000CB8CE7 /* lostItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D91C242B191D7AE000CB8CE7 /* lostItem.m */; };
 		D98D3E2E19089648000E174E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98D3E2D19089648000E174E /* Foundation.framework */; };
@@ -73,6 +74,8 @@
 		B5B5D299191AE6DC00233EB8 /* FoundStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundStore.m; sourceTree = "<group>"; };
 		B5DF0C0E19119ECA00029F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B5DF0C101911A88B00029F29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C466A985191EC7E100CF05B0 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		C466A986191EC7E100CF05B0 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		D91C2428191D735400CB8CE7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D91C242A191D7AE000CB8CE7 /* lostItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lostItem.h; sourceTree = "<group>"; };
 		D91C242B191D7AE000CB8CE7 /* lostItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lostItem.m; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				D98D3E3C19089648000E174E /* AppDelegate.h */,
 				D98D3E3D19089648000E174E /* AppDelegate.m */,
 				D98D3E3F19089648000E174E /* Main.storyboard */,
+				C466A985191EC7E100CF05B0 /* detailViewController.h */,
+				C466A986191EC7E100CF05B0 /* detailViewController.m */,
 				B53BB928191DAFCA00CD31E5 /* MatchViewController.h */,
 				B53BB929191DAFCA00CD31E5 /* MatchViewController.m */,
 				D9F16BE619158AC30016DE9D /* itemsViewController.h */,
@@ -379,6 +384,7 @@
 				B5B5D29A191AE6DC00233EB8 /* FoundStore.m in Sources */,
 				D98D3E3A19089648000E174E /* main.m in Sources */,
 				B53BB92A191DAFCA00CD31E5 /* MatchViewController.m in Sources */,
+				C466A987191EC7E100CF05B0 /* detailViewController.m in Sources */,
 				D91C242C191D7AE000CB8CE7 /* lostItem.m in Sources */,
 				D9E8A7A819182ED200A0EDB5 /* cameraViewController.m in Sources */,
 				D9F16BE5191586030016DE9D /* foundViewController.m in Sources */,
@@ -508,9 +514,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
+					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
+					/afs/cs.wisc.edu/u/y/u/yuqian/Desktop/itemViewController,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 					"$(inherited)",
-					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 					/Users/mlee44/cs407/FoundIt,
@@ -530,9 +537,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
+					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
+					/afs/cs.wisc.edu/u/y/u/yuqian/Desktop/itemViewController,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 					"$(inherited)",
-					/afs/cs.wisc.edu/u/b/a/barker/Desktop/CS407/FoundIt,
 					/Users/yuqianchen/Desktop/2014Spring/FoundIt,
 					/afs/cs.wisc.edu/u/e/k/eklund/Desktop/FoundIt,
 					/Users/mlee44/cs407/FoundIt,

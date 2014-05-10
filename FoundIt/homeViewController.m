@@ -41,26 +41,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if(section ==0){
-        
+    
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if([defaults integerForKey:@"count"] ==0){
             return 1;
         }
         return [defaults integerForKey:@"count"];
-    }
-    else{
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        for(int i = 0; i<[defaults integerForKey:@"count"];i++){
-        NSData *encrypted = [defaults dataForKey:[NSString stringWithFormat:@"%d",i]];
-        lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
+    
 
-        PFQuery *query = [PFQuery queryWithClassName:@"foundObject"];
-       // [query whereKey:@"itemType" equalTo:lost.type]
-            
-        }
-        return 1;
-    }
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:TRUE];
@@ -69,7 +57,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,8 +68,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    if(indexPath.section ==0 ){
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(indexPath.section ==0 ){
     if([defaults integerForKey:@"count"]==0){
         [cell.textLabel setText:@"You don't have anything lost yet"];
         [cell.detailTextLabel setText:@""];
@@ -98,16 +87,14 @@
         [cell.detailTextLabel setText:color];
     }
     }else{
-        [cell.textLabel setText:@"aaaaa"];
+       // [cell.textLabel setText:@"aaaaa"];
+        
     }
     
     return cell;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if(section == 0){
-        return @"Lost Items";
-    }
-    return @"Matched Items" ;
+    return @"Lost Items";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -118,6 +105,26 @@
     
     //remove the correct post from the array here, set controller's post property
     controller.index = indexPath.row;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encrypted = [defaults dataForKey:[NSString stringWithFormat:@"%d",indexPath.row]];
+    lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"foundObject"];
+    
+    [query whereKey:@"itemType" equalTo:lost.type];
+    PFGeoPoint *lostLocation = [[PFGeoPoint alloc]init];
+    lostLocation= [PFGeoPoint geoPointWithLatitude:[lost.locationLatitude doubleValue] longitude:[lost.locationLongitude doubleValue] ];
+    
+    
+    [query whereKey:@"foundLocation" nearGeoPoint:lostLocation withinMiles:[defaults doubleForKey:@"radius"]];
+    
+    controller.list = [query findObjects];
+    
+    
+    
+    
+    
     
     [self.navigationController pushViewController:controller animated:YES];
     

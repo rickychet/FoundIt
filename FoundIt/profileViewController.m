@@ -28,7 +28,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"stars2"]]];
+    
 
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults doubleForKey:@"radius"]){
+        _slider.value = 15.0;
+        _miles.text = [[NSString alloc]initWithFormat:@"%2.1f", _slider.value];
+       
+    }else{
+        _slider.value = [defaults doubleForKey:@"radius"];
+        _miles.text = [[NSString alloc]initWithFormat:@"%2.1f", _slider.value];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +70,15 @@
     
 }
 
+- (IBAction)searchR:(id)sender {
+    
+    _miles.text = [[NSString alloc]initWithFormat:@"%2.1f", _slider.value];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setDouble:_slider.value forKey:@"radius"];
+    
+}
+
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     switch (result)
@@ -79,5 +102,6 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
 
 @end

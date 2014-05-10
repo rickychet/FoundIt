@@ -14,6 +14,8 @@
 @synthesize foundLocation;
 @synthesize description;
 @synthesize turnInLocation;
+@synthesize photoObjectId;
+@synthesize foundImageStore;
 static FoundStore *sharedStore = nil;
 
 // Store* myStore = [Store sharedStore];

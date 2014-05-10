@@ -38,7 +38,7 @@
     MKCoordinateSpan zoom = MKCoordinateSpanMake(0.1, 0.1);
     CLLocationManager *locMan = [[CLLocationManager alloc] init];
     region = (MKCoordinateRegion){(locMan.location.coordinate), zoom};
-    [_mapView setRegion:region animated:NO/YES];
+    [_mapView setRegion:region animated:YES];
     
     _location = [[MapAnnotation alloc]init];
     if(_segueType == 0){
@@ -54,6 +54,15 @@
         [self.mapView addAnnotation:_location];
     }
     
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    MKCoordinateRegion region;
+    MKCoordinateSpan zoom = MKCoordinateSpanMake(0.1, 0.1);
+    CLLocationManager *locMan = [[CLLocationManager alloc] init];
+    region = (MKCoordinateRegion){(locMan.location.coordinate), zoom};
+    [_mapView setRegion:region animated:YES];
 }
 
 - (void)addGestureRecogniserToMapView{

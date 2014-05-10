@@ -90,6 +90,14 @@
         _descriptionText.text = myStore.description;
     }
     
+    if(myStore.photoObjectId != nil){
+        _cameraDetailImage.text = @"";
+        _cameraDetailImage.backgroundColor = [[UIColor alloc]initWithPatternImage:myStore.foundImageStore];
+    }
+    else if(myStore.photoObjectId == nil){
+        _cameraDetailImage.text = @"Get a picture";
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -157,9 +165,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     FoundStore* myStore = [FoundStore sharedStore];
     
+    
+    #warning Hard coded photo Object ID change to allow users to save real images.
+    myStore.photoObjectId = @"6MxA7iXNRX";
+    
     if(indexPath.section == 6 ){
         NSLog(@"add");
-        if(myStore.color != nil && myStore.item !=nil && myStore.foundLocation.latitude !=0 && myStore.foundLocation.longitude !=0 && myStore.turnInLocation.latitude !=0 && myStore.turnInLocation.longitude != 0 && myStore.description != nil){
+        if(myStore.color != nil && myStore.item !=nil && myStore.foundLocation.latitude !=0 && myStore.foundLocation.longitude !=0 && myStore.turnInLocation.latitude !=0 && myStore.turnInLocation.longitude != 0 && myStore.description != nil && myStore.photoObjectId != nil){
         PFObject *foundObject = [PFObject objectWithClassName:@"foundObject"];
                        foundObject[@"colors"]=myStore.color;
         

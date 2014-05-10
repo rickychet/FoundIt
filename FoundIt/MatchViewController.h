@@ -10,5 +10,6 @@
 
 @interface MatchViewController : UITableViewController
 @property (assign, nonatomic) NSInteger index;
+@property(strong,nonatomic)NSArray *list;
 
 @end

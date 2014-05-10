@@ -9,6 +9,7 @@
 #import "MatchViewController.h"
 #import "lostItem.h"
 #import <Parse/Parse.h>
+#import "detailViewController.h"
 @interface MatchViewController ()
 
 @end
@@ -28,22 +29,17 @@
 {
     [super viewDidLoad];
 
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *encrypted = [defaults dataForKey:[NSString stringWithFormat:@"%d",(int)index]];
-    lostItem *lost = [NSKeyedUnarchiver unarchiveObjectWithData:encrypted];
-        
-    PFQuery *query = [PFQuery queryWithClassName:@"foundObject"];
-    
-    [query whereKey:@"itemType" equalTo:lost.type];
-    PFObject *item = [query getFirstObject];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:TRUE];
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -54,28 +50,49 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    }
+
+    PFObject *item = [_list objectAtIndex:indexPath.row];
+    
+    [cell.textLabel setText:item[@"itemType"]];
+    NSArray *color =item[@"colors"];
+    NSString *c = @"";
+    for(int i = 0; i<color.count; i++){
+        c = [[NSString alloc]initWithFormat:@"%@ %@",c,[color objectAtIndex:i]];
+    }
+    [cell.detailTextLabel setText:c];
     // Configure the cell...
     
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PFObject *item = [_list objectAtIndex:indexPath.row];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    detailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"detail"];
+    PFGeoPoint *foundL =item[@"foundLocation"];
+    controller.foundlocation = CLLocationCoordinate2DMake(foundL.latitude, foundL.longitude);
+    controller.turnInlocation = CLLocationCoordinate2DMake([item[@"turnInLocationLatitude"]doubleValue],[item[@"turnInLocationLongitude"]doubleValue]);
+    controller.description = item[@"decsription"];
+    controller.imageID = item[@"imageObjectId"];
+    [self.navigationController pushViewController:controller animated:YES];
 
+}
 
 @end

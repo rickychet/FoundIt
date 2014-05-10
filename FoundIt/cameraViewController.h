@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "FoundStore.h"
 
 @interface cameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 

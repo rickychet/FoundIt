@@ -13,6 +13,9 @@
 
 @interface profileViewController : UIViewController
 - (IBAction)contact:(UIButton *)sender;
+- (IBAction)searchR:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *miles;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 
 @end
