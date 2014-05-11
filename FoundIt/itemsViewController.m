@@ -37,7 +37,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     seleted = [itemlist objectAtIndex:indexPath.row];
     NSLog(@"%@",seleted);
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     //[tableView reloadData];

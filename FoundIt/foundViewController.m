@@ -33,18 +33,18 @@
     FoundStore* myStore = [FoundStore sharedStore];
     passedColor = myStore.color;
     item = myStore.item;
-    NSString *colorsShow = @"";
+    NSString *colors = @"";
     for(int i = 0; i<passedColor.count;i++){
-        colorsShow = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text = colorsShow;
+    _colorchange.text = colors;
     _itemSelected.text = item;
     
     if(myStore.foundLocation.latitude != 0.0){
         _foundLocationLabel.hidden = true;
         _foundLocationCell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
-
+    
     if(myStore.turnInLocation.latitude != 0.0){
         _turnInLabel.hidden = true;
         _turnInCell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -52,7 +52,7 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -67,11 +67,11 @@
     FoundStore* myStore = [FoundStore sharedStore];
     passedColor = myStore.color;
     item = myStore.item;
-    NSString *colorsShow = @"";
+    NSString *colors = @"";
     for(int i = 0; i<passedColor.count;i++){
-        colorsShow = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text = colorsShow;
+    _colorchange.text = colors;
     _itemSelected.text = item;
     
     
@@ -90,9 +90,23 @@
         _descriptionText.text = myStore.description;
     }
     
-    if(myStore.photoObjectId != nil){
+    if(myStore.foundImageStore != nil){
         _cameraDetailImage.text = @"";
-        _cameraDetailImage.backgroundColor = [[UIColor alloc]initWithPatternImage:myStore.foundImageStore];
+        //UIImageView *Capturedphoto = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        //Capturedphoto.image = myStore.foundImageStore;
+        //_imageCell.imageView.image = Capturedphoto.image;
+        
+        //CGSize previewSize = CGSizeMake(80, 80);
+        //UIGraphicsBeginImageContext(previewSize);
+        UIImage *previewImage = myStore.foundImageStore;
+        
+        //[previewImage drawInRect:CGRectMake(0, 0, previewSize.width, previewSize.height)];
+        //UIGraphicsEndImageContext();
+        
+        //_foundImageView.contentMode = UIViewContentModeScaleAspectFit;
+        //_foundImageView.clipsToBounds = YES;
+        [_foundImageView setImage:previewImage];
+        [_imageCell reloadInputViews];
     }
     else if(myStore.photoObjectId == nil){
         _cameraDetailImage.text = @"Get a picture";
@@ -144,16 +158,16 @@
     myStore.turnInLocation = CLLocationCoordinate2DMake(0.0, 0.0);
     myStore.foundLocation = CLLocationCoordinate2DMake(0.0, 0.0);
     myStore.description = NULL;
-     _descriptionText.text = Nil;
+    _descriptionText.text = Nil;
     
     //update the views
     passedColor = myStore.color;
     item = myStore.item;
-    NSString *colorsClear = @"";
+    NSString *colors = @"";
     for(int i = 0; i<passedColor.count;i++){
-        colorsClear = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text =colorsClear;
+    _colorchange.text =colors;
     _itemSelected.text = item;
     _turnInLabel.hidden = false;
     _turnInCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -165,29 +179,61 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     FoundStore* myStore = [FoundStore sharedStore];
     
-    
-    #warning Hard coded photo Object ID change to allow users to save real images.
-    myStore.photoObjectId = @"6MxA7iXNRX";
-    
     if(indexPath.section == 6 ){
         NSLog(@"add");
-        if(myStore.color != nil && myStore.item !=nil && myStore.foundLocation.latitude !=0 && myStore.foundLocation.longitude !=0 && myStore.turnInLocation.latitude !=0 && myStore.turnInLocation.longitude != 0 && myStore.description != nil && myStore.photoObjectId != nil){
-        PFObject *foundObject = [PFObject objectWithClassName:@"foundObject"];
-                       foundObject[@"colors"]=myStore.color;
-        
-        foundObject[@"itemType"]= myStore.item;
+        if(myStore.color != nil && myStore.item !=nil && myStore.foundLocation.latitude !=0 && myStore.foundLocation.longitude !=0 && myStore.turnInLocation.latitude !=0 && myStore.turnInLocation.longitude != 0 && myStore.description != nil && myStore.foundImageStore != nil){
+            
+            //create a parse object
+            PFObject *foundObject = [PFObject objectWithClassName:@"foundObject"];
+            
+            //add color to parse object
+            foundObject[@"colors"]=myStore.color;
+            
+            
+            //add item type to parse object
+            foundObject[@"itemType"]= myStore.item;
+            
+            //add found loctaion to parse object
+            PFGeoPoint *foundLocation = [PFGeoPoint geoPointWithLatitude:myStore.foundLocation.latitude longitude:myStore.foundLocation.longitude];
+            foundObject[@"foundLocation"] = foundLocation;
+            
+            //add turn in location to parse object
+            NSNumber *turnInLocationLatitude  = [[NSNumber alloc]initWithDouble: myStore.turnInLocation.latitude];
+            NSNumber *turnInLocationLongitude = [[NSNumber alloc]initWithDouble:myStore.turnInLocation.longitude];
+            foundObject[@"turnInLocationLatitude"] = turnInLocationLatitude;
+            foundObject[@"turnInLocationLongitude"] = turnInLocationLongitude;
+            
+            //add description to parse object
+            foundObject[@"decsription"] = myStore.description;
+            
+            //add image to image database
+            NSData *imageData = UIImageJPEGRepresentation(myStore.foundImageStore, 0.05f);
+            
+            PFFile *imageFile = [PFFile fileWithData:imageData];
+            
+            //save image file
+            [imageFile save];
 
-        PFGeoPoint *foundLocation = [PFGeoPoint geoPointWithLatitude:myStore.foundLocation.latitude longitude:myStore.foundLocation.longitude];
-        foundObject[@"foundLocation"] = foundLocation;
-        
-        NSNumber *turnInLocationLatitude  = [[NSNumber alloc]initWithDouble: myStore.turnInLocation.latitude];
-        NSNumber *turnInLocationLongitude = [[NSNumber alloc]initWithDouble:myStore.turnInLocation.longitude];
-        foundObject[@"turnInLocationLatitude"] = turnInLocationLatitude;
-        foundObject[@"turnInLocationLongitude"] = turnInLocationLongitude;
-       
-        foundObject[@"decsription"] = myStore.description;
-        [foundObject saveInBackground];
-
+            //create parse object for image
+            PFObject *foundPhoto = [PFObject objectWithClassName:@"images"];
+            [foundPhoto setObject:imageFile forKey:@"imageFile"];
+            
+            [foundPhoto save];
+            //            [foundPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            //                if(error){
+            //                     NSLog(@"Error: %@ %@", error, [error userInfo]);
+            //                }
+            //            }];
+            
+            myStore.photoObjectId = [foundPhoto objectId];
+            
+            
+            
+            //add image object id to parse object
+            foundObject[@"imageObjectId"] = myStore.photoObjectId;
+            
+            [foundObject saveInBackground];
+            
             myStore.item = NULL;
             myStore.color = NULL;
             myStore.turnInLocation = CLLocationCoordinate2DMake(0.0, 0.0);
@@ -196,11 +242,11 @@
             _descriptionText.text = Nil;
             
             
-        [self.navigationController popViewControllerAnimated:YES];
+            [self.navigationController popViewControllerAnimated:YES];
         }else{
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please fill things in all the fields" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
-
+            
         }
     }
     

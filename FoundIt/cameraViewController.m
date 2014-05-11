@@ -78,28 +78,31 @@
     self.imageView.image = chosenImage;
     myStore.foundImageStore = chosenImage;
     
-    NSData *imageData = UIImageJPEGRepresentation(self.imageView.image, 0.05f);
-    
-    PFFile *imageFile = [PFFile fileWithData:imageData];
-    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            PFObject *foundPhoto = [PFObject objectWithClassName:@"images"];
-            [foundPhoto setObject:imageFile forKey:@"imageFile"];
-            
-            [foundPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if(error){
-                     NSLog(@"Error: %@ %@", error, [error userInfo]);
-                }
-            }];
-            
-            myStore.photoObjectId = foundPhoto.objectId;
-        }
-        else{
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+//    NSData *imageData = UIImageJPEGRepresentation(self.imageView.image, 0.05f);
+//    
+//    PFFile *imageFile = [PFFile fileWithData:imageData];
+//    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            PFObject *foundPhoto = [PFObject objectWithClassName:@"images"];
+//            [foundPhoto setObject:imageFile forKey:@"imageFile"];
+//            
+//            [foundPhoto save];
+////            [foundPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+////                if(error){
+////                     NSLog(@"Error: %@ %@", error, [error userInfo]);
+////                }
+////            }];
+//            
+//            myStore.photoObjectId = [foundPhoto objectId];
+//        }
+//        else{
+//            NSLog(@"Error: %@ %@", error, [error userInfo]);
+//        }
+//    }];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 

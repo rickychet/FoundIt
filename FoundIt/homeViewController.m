@@ -21,6 +21,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        double checkRadius = [defaults doubleForKey:@"radius"];
+        
+        if (checkRadius == 0.0) {
+            checkRadius = 15.0;
+            [defaults setDouble:checkRadius forKey:@"radius"];
+        }
     }
     return self;
 }
@@ -131,6 +138,10 @@
     
     
     [query whereKey:@"foundLocation" nearGeoPoint:lostLocation withinMiles:[defaults doubleForKey:@"radius"]];
+        
+        for (int i = 0; i < lost.color.count; i++) {
+            [query whereKey:@"color" containsString:[lost.color  objectAtIndex:i]];
+        }
     
     controller.list = [query findObjects];
     [self.navigationController pushViewController:controller animated:YES];
