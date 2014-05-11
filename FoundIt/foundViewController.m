@@ -33,11 +33,11 @@
     FoundStore* myStore = [FoundStore sharedStore];
     passedColor = myStore.color;
     item = myStore.item;
-    NSString *colors = @"";
+    NSString *colorsShow = @"";
     for(int i = 0; i<passedColor.count;i++){
-        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+        colorsShow = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text =colors;
+    _colorchange.text = colorsShow;
     _itemSelected.text = item;
     
     if(myStore.foundLocation.latitude != 0.0){
@@ -67,11 +67,11 @@
     FoundStore* myStore = [FoundStore sharedStore];
     passedColor = myStore.color;
     item = myStore.item;
-    NSString *colors = @"";
+    NSString *colorsShow = @"";
     for(int i = 0; i<passedColor.count;i++){
-        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+        colorsShow = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text =colors;
+    _colorchange.text = colorsShow;
     _itemSelected.text = item;
     
     
@@ -149,11 +149,11 @@
     //update the views
     passedColor = myStore.color;
     item = myStore.item;
-    NSString *colors = @"";
+    NSString *colorsClear = @"";
     for(int i = 0; i<passedColor.count;i++){
-        colors = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
+        colorsClear = [NSString stringWithFormat:@"%@ %@",colors,[passedColor objectAtIndex:i]];
     }
-    _colorchange.text =colors;
+    _colorchange.text =colorsClear;
     _itemSelected.text = item;
     _turnInLabel.hidden = false;
     _turnInCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
