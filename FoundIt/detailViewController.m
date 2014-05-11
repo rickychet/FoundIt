@@ -30,7 +30,13 @@ MapAnnotation *foundLoc;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor clearColor];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"flower"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     MKCoordinateRegion region;
     MKCoordinateSpan zoom = MKCoordinateSpanMake(0.1, 0.1);
     region = (MKCoordinateRegion){(_turnInlocation), zoom};
@@ -52,7 +58,7 @@ MapAnnotation *foundLoc;
     foundLoc.coordinate = _foundlocation;
     
     _descriptionLabel.text = _description;
-    
+    _descriptionLabel.backgroundColor = [UIColor clearColor];
     maps.hidden = true;
     imageView.hidden = false;
 	// Do any additional setup after loading the view.

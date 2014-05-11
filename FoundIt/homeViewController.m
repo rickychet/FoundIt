@@ -30,7 +30,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back"]]];
-
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"flower"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    _display.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,6 +73,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
+    cell.backgroundColor = [UIColor clearColor];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if(indexPath.section ==0 ){
     if([defaults integerForKey:@"count"]==0){
