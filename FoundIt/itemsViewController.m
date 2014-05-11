@@ -29,19 +29,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    itemlist = [[NSArray alloc]initWithObjects:@"Laptop",@"Keys",@"Backpack/Bag",@"Umbrella",@"Hat",@"Water Bottle",@"Earphones",@"Gloves", @"Scarf",@"Wallet",@"Clothes",nil];
+    itemlist = [[NSArray alloc]initWithObjects:@"Laptop",@"Keys",@"Backpack/Bag",@"Umbrella",@"Hat",@"Water Bottle",@"Earphones",@"Gloves", @"Scarf",@"Wallet",@"Jacket",nil];
     
 }
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     seleted = [itemlist objectAtIndex:indexPath.row];
     NSLog(@"%@",seleted);
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
+    //[tableView reloadData];
+
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 - (IBAction)submit:(id)sender {

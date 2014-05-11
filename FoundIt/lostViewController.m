@@ -128,7 +128,6 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.section == 3){
         Store* myStore = [Store sharedStore];
 

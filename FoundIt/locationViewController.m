@@ -24,6 +24,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        CLLocationCoordinate2D defaultLoc = CLLocationCoordinate2DMake(43.0667, -89.4000);
+        MKCoordinateSpan zoom2 = MKCoordinateSpanMake(0.2, 0.2);
+        MKCoordinateRegion Defregion = MKCoordinateRegionMake(defaultLoc, zoom2);
+        [_mapView setRegion: Defregion];
     }
     return self;
 }
@@ -34,11 +38,16 @@
     [self.mapView setDelegate:self];
     [self addGestureRecogniserToMapView];
     
+
+                          
+
+    
     MKCoordinateRegion region;
     MKCoordinateSpan zoom = MKCoordinateSpanMake(0.1, 0.1);
     CLLocationManager *locMan = [[CLLocationManager alloc] init];
     region = (MKCoordinateRegion){(locMan.location.coordinate), zoom};
     [_mapView setRegion:region animated:YES];
+    //_mapView.showsUserLocation = false;
     
     _location = [[MapAnnotation alloc]init];
     if(_segueType == 0){
@@ -57,12 +66,14 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    //_mapView.showsUserLocation = true;
     [super viewDidAppear:animated];
     MKCoordinateRegion region;
     MKCoordinateSpan zoom = MKCoordinateSpanMake(0.1, 0.1);
     CLLocationManager *locMan = [[CLLocationManager alloc] init];
     region = (MKCoordinateRegion){(locMan.location.coordinate), zoom};
     [_mapView setRegion:region animated:YES];
+    //_mapView.showsUserLocation = false;
 }
 
 - (void)addGestureRecogniserToMapView{
