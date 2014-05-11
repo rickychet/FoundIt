@@ -138,10 +138,6 @@
     
     
     [query whereKey:@"foundLocation" nearGeoPoint:lostLocation withinMiles:[defaults doubleForKey:@"radius"]];
-        
-        for (int i = 0; i < lost.color.count; i++) {
-            [query whereKey:@"color" containsString:[lost.color  objectAtIndex:i]];
-        }
     
     controller.list = [query findObjects];
     [self.navigationController pushViewController:controller animated:YES];

@@ -74,7 +74,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    //cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor clearColor];
     PFObject *item = [_list objectAtIndex:indexPath.row];
     
     [cell.textLabel setText:item[@"itemType"]];
