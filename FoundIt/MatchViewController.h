@@ -11,5 +11,6 @@
 @interface MatchViewController : UITableViewController
 @property (assign, nonatomic) NSInteger index;
 @property(strong,nonatomic)NSArray *list;
+- (IBAction)deleteLostItem:(UIBarButtonItem *)sender;
 
 @end

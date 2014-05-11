@@ -19,9 +19,12 @@
     __weak IBOutlet UIImageView *imageView;
 }
 - (IBAction)views:(id)sender;
+- (IBAction)confirmationButton:(UIButton *)sender;
 @property (nonatomic, assign) CLLocationCoordinate2D foundlocation;
 @property (nonatomic, assign) CLLocationCoordinate2D turnInlocation;
 @property (weak, nonatomic) NSString *description;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 @property (strong, nonatomic) NSString *imageID;
+@property (strong, nonatomic) NSString *foundItemID;
+@property (assign, nonatomic) int index;
 @end

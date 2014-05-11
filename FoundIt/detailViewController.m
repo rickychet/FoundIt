@@ -91,4 +91,45 @@ MapAnnotation *foundLoc;
    
     
 }
+
+- (IBAction)confirmationButton:(UIButton *)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"WARNING" message:@"Clicking OK will delete this item from the database" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked cancel
+    if (buttonIndex == 0) {
+        NSLog(@"this is button index 0");
+    }
+    //the user clicked okay
+    if (buttonIndex == 1) {
+       //delete from parse
+        PFQuery *query = [PFQuery queryWithClassName:@"foundObject"];
+        PFObject *imageObject = [query getObjectWithId:_foundItemID];
+        [imageObject deleteInBackground];
+        NSString *indexStr = [NSString stringWithFormat:@"%d",_index];
+        
+        //delete from NSUserData
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSInteger count = [defaults integerForKey:@"count"];
+        NSInteger decCount = count - 1;
+        [defaults setInteger:decCount forKey:@"count"];
+        [defaults removeObjectForKey:indexStr];
+        
+        
+        //fill the empty hole left by deleted item
+        for (int i = _index; i < decCount; i++) {
+            [defaults setObject:[defaults objectForKey:[NSString stringWithFormat:@"%d",i + 1]] forKey:[NSString stringWithFormat:@"%d", i]];
+        }
+        
+        [defaults synchronize];
+        
+        //pop back to root controller
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+        NSLog(@"this is button index 1");
+    }
+
+}
 @end

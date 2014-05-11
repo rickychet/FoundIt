@@ -103,5 +103,11 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return NO;
+}
+
 
 @end

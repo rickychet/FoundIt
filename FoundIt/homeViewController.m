@@ -100,10 +100,17 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cmpStr = cell.textLabel.text;
+    NSString *otherStr = [NSString stringWithFormat:@"You don't have anything lost yet"];
+    
+    if ([cmpStr isEqualToString:otherStr]) {
+        NSLog(@"Do nothing");
+    }
+    else{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MatchViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"match"];
     
-    //remove the correct post from the array here, set controller's post property
     controller.index = indexPath.row;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -120,15 +127,14 @@
     [query whereKey:@"foundLocation" nearGeoPoint:lostLocation withinMiles:[defaults doubleForKey:@"radius"]];
     
     controller.list = [query findObjects];
-    
-    
-    
-    
-    
-    
     [self.navigationController pushViewController:controller animated:YES];
-    
-    
+    }
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return NO;
 }
 
 @end
