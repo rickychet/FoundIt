@@ -28,7 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    //self.tableView.backgroundColor = [UIColor clearColor];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"flower"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    //self.tableView.backgroundColor = [UIColor clearColor];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,7 +74,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-
+    //cell.backgroundColor = [UIColor clearColor];
     PFObject *item = [_list objectAtIndex:indexPath.row];
     
     [cell.textLabel setText:item[@"itemType"]];
